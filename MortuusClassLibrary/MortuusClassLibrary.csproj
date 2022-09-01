@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6D2DC468-C081-40C9-A485-8EF2EA8BD2F4}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleUI</RootNamespace>
-    <AssemblyName>ConsoleUI</AssemblyName>
+    <ProjectGuid>{4F5AD540-5EFC-4DA1-A6CD-255BB012E281}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MortuusClassLibrary</RootNamespace>
+    <AssemblyName>MortuusClassLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,17 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="IngameItem.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="LivingCreature.cs" />
+    <Compile Include="Mob.cs" />
+    <Compile Include="Potion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadFile.cs" />
+    <Compile Include="Room.cs" />
+    <Compile Include="Treasure.cs" />
+    <Compile Include="Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MortuusClassLibrary\MortuusClassLibrary.csproj">
-      <Project>{4f5ad540-5efc-4da1-a6cd-255bb012e281}</Project>
-      <Name>MortuusClassLibrary</Name>
-    </ProjectReference>
+    <None Include="CSV Files\Item.csv" />
+    <None Include="CSV Files\Mobs.csv" />
+    <None Include="CSV Files\potions.csv" />
+    <None Include="CSV Files\treasure.csv" />
+    <None Include="CSV Files\weapons.csv" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
