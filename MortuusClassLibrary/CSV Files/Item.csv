@@ -1,0 +1,5 @@
+ID,Name,Description,Quest Item,Price
+1,Abacus,A standard tool used to make calculations.,FALSE,10
+2,Bag of Holding,Name is self explanatory,FALSE,5
+3,Vial,A vial can hold 4 ounces of liquid.,TRUE,15
+4,Tinderbox,"This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire.",TRUE,20
