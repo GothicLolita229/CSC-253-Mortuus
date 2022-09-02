@@ -10,6 +10,12 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+            MainMenu();
+        }
+
+        static void MainMenu()
+        {
+            LoadPlayer.PlayerInfo();
         }
     }
 }
