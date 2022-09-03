@@ -45,6 +45,7 @@
     <Compile Include="Item.cs" />
     <Compile Include="LivingCreature.cs" />
     <Compile Include="Mob.cs" />
+    <Compile Include="MovePlayer.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Potion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
