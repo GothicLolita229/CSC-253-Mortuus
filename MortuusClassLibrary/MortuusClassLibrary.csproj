@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CombatSystem.cs" />
     <Compile Include="IngameItem.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="LivingCreature.cs" />

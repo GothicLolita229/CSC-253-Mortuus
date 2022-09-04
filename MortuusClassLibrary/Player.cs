@@ -37,7 +37,8 @@ namespace MortuusClassLibrary
         }
 
         public string Password { get; set; }
-        public string Location { get; set; }
+        public static int Location { get; set; }
+        public static int Hp { get; set; }
         public List<Item> Inventory { get; set; }
         public List<Item> Quests { get; set; }
         public string name
@@ -45,6 +46,9 @@ namespace MortuusClassLibrary
             get { return _name; }
             set { }
         }
+
+        
+
         public static bool checkPassword(ref string password)
         {
             var regexItem = new Regex("[a-zA-Z0-9 ]");

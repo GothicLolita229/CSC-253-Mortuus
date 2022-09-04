@@ -33,14 +33,14 @@ namespace MortuusClassLibrary
             }
             return currentLocation;
         }
-        //public static int MoveEast(ref int currentLocation)
-        //{
-            //if (currentLocation + MAP_WIDTH <= roomList.Count - 1) //TODO fix the above public static List
-            //{
-                //currentLocation += MAP_WIDTH;
-            //}
-            //return currentLocation;
-        //}
+        public static int MoveEast(ref int currentLocation)
+        {
+            if (currentLocation + MAP_WIDTH <= MakeLists.playerRooms.Count - 1) //TODO fix the above public static List
+            {
+                currentLocation += MAP_WIDTH;
+            }
+            return currentLocation;
+        }
         public static int MoveWest(ref int currentLocation)
         {
             if (currentLocation - MAP_WIDTH >= 0)

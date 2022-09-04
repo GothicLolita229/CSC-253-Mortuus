@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoadPlayer.cs" />
+    <Compile Include="GameMenuSwitcher.cs" />
     <Compile Include="OptionsMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

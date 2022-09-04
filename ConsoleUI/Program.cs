@@ -11,16 +11,14 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            MainMenu();
-
-
+            Game();
         }
 
-        static void MainMenu()
+        static void Game()
         {
-            LoadPlayer.PlayerInfo();
+            string charName = LoadPlayer.PlayerInfo();
+            GameMenuSwitcher.MainMenu();
         }
-
 
     }
 }
