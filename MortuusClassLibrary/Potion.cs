@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MortuusClassLibrary
 {
-    class Potion : IngameItem
+    public class Potion : IngameItem
     {
         private string _idNumber;
         private string _name;

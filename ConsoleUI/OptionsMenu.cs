@@ -14,29 +14,30 @@ namespace ConsoleUI
             switch (userChoice)
             {
                 case '1':
-                    RoomFileReader();
+                    //RoomFileReader();
                     break;
                 case '2':
-                    WeaponsFileReader();
+                    //WeaponsFileReader();
                     break;
                 case '3':
-                    PotionsFileReader();
+                    //PotionsFileReader();
                     break;
                 case '4':
-                    TreasureFileReader();
+                    //TreasureFileReader();
                     break;
                 case '5':
-                    ItemsFileReader();
+                    //ItemsFileReader();
                     break;
                 case '6':
-                    MobsFileReader();
+                    //MobsFileReader();
                     break;
                 case '7':
-                    MainMenuFileReader();
+                    //MainMenuFileReader();
                 default:
-                    Exit();
+                    //Exit();
                     break;
             }
+
         }
     }
 }
