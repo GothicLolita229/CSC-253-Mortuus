@@ -1,0 +1,6 @@
+ID,Name,Race,Class,HP,AC,Weapon,Description
+1,Human,Human,Brawler,50,12,Fist,A hostile human.
+2,Zombie,Zombie,Brute,15,15,Fist,Undead brought to life.
+3,Rat,Rat,Tiny beast,5,10,Teeth,A small creature.
+4,Goblin,Goblin,Brute,30,16,Club,A devilish looking creature.
+5,Gang Member,Human,Duelist,50,0,Blade,A human who seems to be affiliated with others.
