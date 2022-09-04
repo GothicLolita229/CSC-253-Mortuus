@@ -1,0 +1,10 @@
+ID,Name,Description,Exits
+1,Entrance,Mysterious archway looming over your head,
+2,Foyer,Where will this lead you?,
+3,Great Hall,A large chandalier lights up the room and high vaulted ceilings seem to become the night sky,
+4,Corridor,I see you've chosen to continue exploring this castle,
+5,Store Room,This is where weary travelers come to restock their stores and the cook comes to grab food ,
+6,Kitchen,Cook rules supreme… but you may be able to sneak a bite,
+7,Wet Dungeon,Beware of illness and black mold,
+8,Armory,Come here to replenish your weapons and sharpen your sword ,
+9,Dungeon,You skip the next turn,
