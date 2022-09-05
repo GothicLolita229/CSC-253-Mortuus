@@ -27,7 +27,7 @@ namespace MortuusClassLibrary
         public static List<Treasure> gameTreasures = new List<Treasure>();
         public static List<Potion> gamePotions = new List<Potion>();
 
-        public static void ItemsFileReader()
+        public static List<Item> ItemsFileReader()
         {
             foreach (string item in items)
             {
@@ -37,10 +37,19 @@ namespace MortuusClassLibrary
                 //isQuestItem = bool.Parse(tokens[3]);
                 Item gameItem = new Item(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4]);
                 gameItems.Add(gameItem);
-         
+                Console.WriteLine(gameItem);
             }
-            //return gameItems;
+            return gameItems;
         }
+
+        /*public static List<Item> ItemDisplay(List<Item>gameItems)
+        {
+            foreach (var item in gameItems)
+            {
+                Console.WriteLine(items);
+            }
+            return gameItems;
+        }*/
 
         public static void MobsFileReader()
         {
@@ -65,7 +74,6 @@ namespace MortuusClassLibrary
                 Room playerRoom = new Room(tokens[0], tokens[1], tokens[2], tokens[3]);
                 playerRooms.Add(playerRoom);
             }
-            Console.WriteLine(playerRooms[1].Description);
         }
 
         public static void WeaponsFileReader()

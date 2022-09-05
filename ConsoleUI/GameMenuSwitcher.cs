@@ -12,7 +12,7 @@ namespace ConsoleUI
     {
         //public static char userChoice; //where is this coming from? because I think that's why game doesn't continue
         //TODO add current location to hold players location
-        public static int currentLocation = 1;
+        public static int currentLocation = 0;
         
         public static void MainMenu()
         {
@@ -21,22 +21,24 @@ namespace ConsoleUI
             int damage = CombatSystem.damage;
             int hp = Player.Hp;
             char userChoice;
+            
             Console.WriteLine("\nMAIN MENU: \n");
             MakeLists.MainMenu();
+            MakeLists.RoomFileReader();
             do
             {
-                userChoice = Console.ReadLine()[0];
-                OptionsMenu.ExploreMenu(userChoice);
+                //userChoice = Console.ReadLine()[0];
+                //OptionsMenu.ExploreMenu(userChoice);
+                
                 Console.Write($"{charName}, enter numeric value from menu to select an option: ");
-
-                
+                userChoice = Console.ReadLine()[0];
                 Console.WriteLine("\n");
-           
                 Room thisRoom = MakeLists.playerRooms[currentLocation];
-                
                 Console.WriteLine($"You are in {thisRoom.Name} ( {thisRoom.IdNumber} )");
                 Console.WriteLine(thisRoom.Description);
-                
+                Console.WriteLine($"Your exits are {thisRoom.Exit}");
+                //userChoice = Console.ReadLine()[0];
+
                 switch (userChoice)
                 {
                     case '1':
@@ -92,7 +94,7 @@ namespace ConsoleUI
                         OptionsMenu.Exit();
                         break;
                     case '7':
-                        Console.WriteLine("Debug Menu");
+                        Console.WriteLine("Menu");
                         char menuOption = Console.ReadLine()[0];
                         OptionsMenu.ExploreMenu(menuOption);
                         break;

@@ -15,7 +15,7 @@ namespace MortuusClassLibrary
         private string _race;
         private string _lcclass;
         private string _description;
-        private int _hp;
+        private static int _hp = 100;
         private int _ac;
         private string _password;
         private int _location = 0;
@@ -46,7 +46,7 @@ namespace MortuusClassLibrary
             get { return _location; }
             set { }
         }
-        public int Hp
+        public static int Hp
         {
             get { return _hp;  }
             set { }

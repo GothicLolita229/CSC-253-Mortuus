@@ -8,7 +8,7 @@ namespace MortuusClassLibrary
 {
     public class CombatSystem
     {
-        public static int Hp = 100;
+        public static int Hp = Player.Hp;
         //public static int newHp = 0;
         public static int damage = 0;
         public static int AttackPoints()
