@@ -10,7 +10,7 @@ namespace ConsoleUI
 {
     public class GameMenuSwitcher
     {
-        public static char userChoice; //where is this coming from? because I think that's why game doesn't continue
+        //public static char userChoice; //where is this coming from? because I think that's why game doesn't continue
         //TODO add current location to hold players location
         public static int currentLocation = Player.Location;
         
@@ -20,12 +20,15 @@ namespace ConsoleUI
             //char userChoice;
             int damage = CombatSystem.damage;
             int hp = Player.Hp;
+            char userChoice;
             Console.WriteLine("\nMAIN MENU: \n");
+            MakeLists.MainMenu();
             do
             {
+                userChoice = Console.ReadLine()[0];
                 OptionsMenu.ExploreMenu(userChoice);
                 Console.Write($"{charName}, enter numeric value from menu to select an option: ");
-                userChoice = Console.ReadLine()[0];
+                
                 
                 Console.WriteLine("\n");
                 
