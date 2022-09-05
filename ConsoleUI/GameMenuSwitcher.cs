@@ -28,6 +28,7 @@ namespace ConsoleUI
                 userChoice = Console.ReadLine()[0];
                 OptionsMenu.ExploreMenu(userChoice);
                 Console.Write($"{charName}, enter numeric value from menu to select an option: ");
+
                 
                 Console.WriteLine("\n");
            
