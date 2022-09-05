@@ -7,7 +7,7 @@ using System.IO;
 
 namespace MortuusClassLibrary
 {
-    public static class MakeLists
+    public class MakeLists
     {
         public static List<Item> itemInventoryList = new List<Item>();
         public static List<Weapon> weaponInventoryList = new List<Weapon>();
@@ -31,12 +31,15 @@ namespace MortuusClassLibrary
         {
             foreach (string item in items)
             {
-                bool isQuestItem;
+                //bool isQuestItem;
                 string[] tokens = item.Split(',');
-                isQuestItem = bool.Parse(tokens[3]);
-                Item gameItem = new Item(tokens[0], tokens[1], tokens[2], isQuestItem, tokens[4]);
-                gameItems.Add(gameItem);   
-            } 
+                //Console.WriteLine(tokens[0] + " " + " " + tokens[1] + " " + tokens[2]+ " " + tokens[3]+ " " + tokens[4] + " ");
+                //isQuestItem = bool.Parse(tokens[3]);
+                Item gameItem = new Item(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4]);
+                gameItems.Add(gameItem);
+         
+            }
+            //return gameItems;
         }
 
         public static void MobsFileReader()
@@ -54,14 +57,15 @@ namespace MortuusClassLibrary
         }
         public static void RoomFileReader()
         {
-            foreach (string room in rooms)
+            foreach (var room in rooms)
             {
                 string[] tokens = room.Split(',');
-                int idNumber;
-                idNumber = int.Parse(tokens[0]);
-                Room playerRoom = new Room(idNumber, tokens[1], tokens[2], tokens[3]);
+                //int idNumber;
+                //idNumber = int.Parse(tokens[0]);
+                Room playerRoom = new Room(tokens[0], tokens[1], tokens[2], tokens[3]);
                 playerRooms.Add(playerRoom);
             }
+            Console.WriteLine(playerRooms[1].Description);
         }
 
         public static void WeaponsFileReader()
@@ -98,6 +102,17 @@ namespace MortuusClassLibrary
                 Treasure gameTreasure = new Treasure(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4]);
                 gameTreasures.Add(gameTreasure);
             }
+        }
+
+        public static List<string> MainMenu()
+        {
+            List<string> menuList = ReadFile.FileReader("mainMenu.txt");
+            //optionList.Sort();
+            foreach (var option in menuList)
+            {
+                Console.WriteLine(option);
+            }
+            return menuList;
         }
     }
 

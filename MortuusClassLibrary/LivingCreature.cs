@@ -27,12 +27,40 @@ namespace MortuusClassLibrary
             _ac = ac;
         }
 
-        public string IDNumber { get; set; }
-        public string Name { get; set; }
-        public string Race { get; set; }
-        public string LcClass { get; set; }
-        public string Description { get; set; }
-        public int HP { get; set; }
-        public int AC { get; set; }
+        public string IDNumber
+        {
+            get { return _idNumber; }
+            set { }
+        }
+        public string Name
+        {
+            get { return _name; }
+            set { }
+        }
+        public string Race
+        {
+            get { return _race; }
+            set { }
+        }
+        public string LcClass
+        {
+            get { return _lcclass; }
+            set { }
+        }
+        public string Description
+        {
+            get { return _description; }
+            set { }
+        }
+        public int HP
+        {
+            get { return _hp; }
+            set { }
+        }
+        public int AC
+        {
+            get { return _ac; }
+            set { }
+        }
     }
 }

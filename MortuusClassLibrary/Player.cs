@@ -36,11 +36,31 @@ namespace MortuusClassLibrary
 
         }
 
-        public string Password { get; set; }
-        public static int Location { get; set; }
-        public static int Hp { get; set; }
-        public List<Item> Inventory { get; set; }
-        public List<Item> Quests { get; set; }
+        public string Password
+        {
+            get { return _password; }
+            set { }
+        }
+        public int Location
+        {
+            get { return _location; }
+            set { }
+        }
+        public int Hp
+        {
+            get { return _hp;  }
+            set { }
+        }
+        public List<Item> Inventory
+        {
+            get { return _inventory; }
+            set { }
+        }
+        public List<Item> Quests
+        {
+            get { return _quests; }
+            set { }
+        }
         public string name
         {
             get { return _name; }

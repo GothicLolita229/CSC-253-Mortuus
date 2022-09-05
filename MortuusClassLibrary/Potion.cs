@@ -25,7 +25,15 @@ namespace MortuusClassLibrary
             _healthPotion = healthPotion;
         }
 
-        public int ValueChange { get; set; }
-        public int HealthPotion { get; set; }
+        public int ValueChange
+        {
+            get { return _valueChange; }
+            set { }
+        }
+        public int HealthPotion
+        {
+            get { return _healthPotion; }
+            set { }
+        }
     }
 }

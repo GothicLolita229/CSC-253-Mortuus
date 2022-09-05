@@ -27,7 +27,15 @@ namespace MortuusClassLibrary
         }
 
 
-        public string DamageType { get; set; }
-        public int Damage { get; set; }
+        public string DamageType
+        {
+            get { return _damageType; }
+            set { }
+        }
+        public int Damage
+        {
+            get { return _damage; }
+            set { }
+        }
     }
 }

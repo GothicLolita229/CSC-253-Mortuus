@@ -22,10 +22,27 @@ namespace MortuusClassLibrary
 
         }
 
-        public string IDNumber { get; set; }
-        public string Name { get; set; }
+        public string IDNumber
+        {
+            get { return _idNumber; }
+            set { }
+        }
 
-        public string Description { get; set; }
-        public string Price { get; set; }
+        public string Name
+        {
+            get { return _name; }
+            set { }
+        }
+
+        public string Description
+        {
+            get { return _description; }
+            set { }
+        }
+        public string Price
+        {
+            get { return _price; }
+            set { }
+        }
     }
 }

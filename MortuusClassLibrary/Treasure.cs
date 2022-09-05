@@ -24,6 +24,10 @@ namespace MortuusClassLibrary
             _price = price;
         }
 
-        public string QuestItem { get; set; }
+        public string QuestItem
+        {
+            get { return _questItem; }
+            set { }
+        }
     }
 }

@@ -34,8 +34,20 @@ namespace MortuusClassLibrary
         }
 
 
-        public string MobClass { get; set; }
-        public string Weapon { get; set; }
-        public string Inventory { get; set; }
+        public string MobClass
+        {
+            get { return _mobClass; }
+            set { }
+        }
+        public string Weapon
+        {
+            get { return _weapon; }
+            set { }
+        }
+        public string Inventory
+        {
+            get { return _inventory; }
+            set { }
+        }
     }
 }

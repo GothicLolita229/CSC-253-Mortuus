@@ -10,12 +10,14 @@ namespace ConsoleUI
 {
     class OptionsMenu
     {
+        
         public static void ExploreMenu(char userChoice)
         {
 
             switch (userChoice)
             {
                 case '1':
+                    MakeLists.RoomFileReader();
                     Console.WriteLine(MakeLists.playerRooms);
                     break;
                 case '2':
@@ -28,6 +30,7 @@ namespace ConsoleUI
                     Console.WriteLine(MakeLists.gameTreasures);
                     break;
                 case '5':
+                    MakeLists.ItemsFileReader();
                     Console.WriteLine(MakeLists.gameItems);
                     break;
                 case '6':

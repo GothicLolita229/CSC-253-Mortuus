@@ -11,10 +11,10 @@ namespace MortuusClassLibrary
         private string _idNumber;
         private string _name;
         private string _description;
-        private bool _questItem;
+        private string _questItem;
         private string _price;
 
-        public Item(string idNumber, string name, string description, bool questItem, string price)
+        public Item(string idNumber, string name, string description, string questItem, string price)
             : base(idNumber, name, description, price)
         {
             _idNumber = idNumber;
@@ -23,6 +23,10 @@ namespace MortuusClassLibrary
             _questItem = questItem;
             _price = price;
         }
-        public bool QuestItem { get; set; }
+        public string QuestItem
+        {
+            get { return _questItem; }
+            set { }
+        }
     }
 }

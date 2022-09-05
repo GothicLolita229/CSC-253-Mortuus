@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace MortuusClassLibrary
 {
     public class Room
     {
-        private int _idNumber;
+        private string _idNumber;
         private string _name;
         private string _description;
         private string _exit;
@@ -18,7 +19,7 @@ namespace MortuusClassLibrary
         {
         }
 
-        public Room(int idNumber, string name, string description, string exit)
+        public Room(string idNumber, string name, string description, string exit)
         {
             _idNumber = idNumber;
             _name = name;
@@ -26,10 +27,26 @@ namespace MortuusClassLibrary
             _exit = exit;
             inventory = new List<Item>();
         }
-        public string Name { get; set; }
-        public int IdNumber { get; set; }
-        public string Description { get; set; }
-        public string Exit { get; set; }
+        public string Name
+        {
+            get { return _name; }
+            set { }
+        }
+        public string IdNumber
+        { 
+          get { return _idNumber; }
+          set { }
+        }
+        public string Description
+        {
+            get { return _description; }
+            set { }
+        }
+        public string Exit
+        {
+            get { return _exit; }
+            set { }
+        }
 
 
         public static void addItem(Item newItem, List<Item> playerInventory)
@@ -41,5 +58,6 @@ namespace MortuusClassLibrary
         {
             playerInventory.Add(newWeapon);
         }
+
     }
 }
