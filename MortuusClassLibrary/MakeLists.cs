@@ -37,7 +37,11 @@ namespace MortuusClassLibrary
                 //isQuestItem = bool.Parse(tokens[3]);
                 Item gameItem = new Item(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4]);
                 gameItems.Add(gameItem);
-                Console.WriteLine(gameItem);
+                //Console.WriteLine(gameItem.ToString());
+            }
+            foreach (var item in gameItems)
+            {
+                Console.WriteLine(item.Name);
             }
             return gameItems;
         }
@@ -51,7 +55,7 @@ namespace MortuusClassLibrary
             return gameItems;
         }*/
 
-        public static void MobsFileReader()
+        public static List<Mob> MobsFileReader()
         {
             foreach (string mob in mobs)
             {
@@ -63,6 +67,12 @@ namespace MortuusClassLibrary
                 Mob gameMob = new Mob(tokens[0], tokens[1], tokens[2], tokens[3], mobHp, mobAc, tokens[6], tokens[7], tokens[8]);
                 gameMobs.Add(gameMob);
             }
+            foreach (var mob in gameMobs)
+            {
+                Console.WriteLine(mob.Name);
+            }
+            return gameMobs;
+
         }
         public static void RoomFileReader()
         {
@@ -74,9 +84,26 @@ namespace MortuusClassLibrary
                 Room playerRoom = new Room(tokens[0], tokens[1], tokens[2], tokens[3]);
                 playerRooms.Add(playerRoom);
             }
+            
         }
 
-        public static void WeaponsFileReader()
+        public static List<Room> RoomFileDisplay()
+        {
+            foreach (var room in rooms)
+            {
+                string[] tokens = room.Split(',');
+                Room playerRoom = new Room(tokens[0], tokens[1], tokens[2], tokens[3]);
+                playerRooms.Add(playerRoom);
+                
+            }
+            foreach (var room in playerRooms)
+            {
+             Console.WriteLine(room.Name);
+            }
+            return playerRooms;
+        }
+
+        public static List<Weapon> WeaponsFileReader()
         {
             foreach (string weapon in weapons)
             {
@@ -86,9 +113,14 @@ namespace MortuusClassLibrary
                 Weapon gameWeapon = new Weapon(tokens[0], tokens[1], tokens[2], tokens[3], damage, tokens[5]);
                 gameWeapons.Add(gameWeapon);
             }
+            foreach (var weapon in gameWeapons)
+            {
+                Console.WriteLine(weapon.Name);
+            }
+            return gameWeapons;
         }
 
-        public static void PotionsFileReader()
+        public static List<Potion> PotionsFileReader()
         {
             foreach (string potion in potions)
             {
@@ -100,9 +132,14 @@ namespace MortuusClassLibrary
                 Potion gamePotion = new Potion(tokens[0], tokens[1], tokens[2], tokens[3], valueChange, healthPotion);
                 gamePotions.Add(gamePotion);
             }
+            foreach (var potion in gamePotions)
+            {
+                Console.WriteLine(potion.Name);
+            }
+            return gamePotions;
         }
 
-        public static void TreasureFileReader()
+        public static List<Treasure> TreasureFileReader()
         {
             foreach (string treasure in treasures)
             {
@@ -110,6 +147,11 @@ namespace MortuusClassLibrary
                 Treasure gameTreasure = new Treasure(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4]);
                 gameTreasures.Add(gameTreasure);
             }
+            foreach (var treasure in gameTreasures)
+            {
+                Console.WriteLine(treasure.Name);
+            }
+            return gameTreasures;
         }
 
         public static List<string> MainMenu()

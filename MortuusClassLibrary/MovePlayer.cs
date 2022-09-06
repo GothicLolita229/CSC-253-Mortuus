@@ -20,7 +20,7 @@ namespace MortuusClassLibrary
         {
             if (currentLocation != (MAP_WIDTH - 1) && currentLocation != (MAP_WIDTH * 2) - 1 && currentLocation != (MAP_WIDTH * 3) - 1)
             {
-                currentLocation++;
+                currentLocation+=MAP_WIDTH;
             }
             return currentLocation;
         }
@@ -29,23 +29,23 @@ namespace MortuusClassLibrary
 
             if (currentLocation != 0 && currentLocation != MAP_WIDTH && currentLocation != MAP_WIDTH * 2)
             {
-                currentLocation--;
+                currentLocation-=MAP_WIDTH;
             }
             return currentLocation;
         }
         public static int MoveEast(ref int currentLocation)
         {
-            if (currentLocation + MAP_WIDTH <= MakeLists.playerRooms.Count - 1) //TODO fix the above public static List
+            if (currentLocation != 3 || currentLocation != 6 || currentLocation != 9)//currentLocation + MAP_WIDTH <= MakeLists.playerRooms.Count - 1) //TODO fix the above public static List
             {
-                currentLocation += MAP_WIDTH;
+                currentLocation += 1;
             }
             return currentLocation;
         }
         public static int MoveWest(ref int currentLocation)
         {
-            if (currentLocation - MAP_WIDTH >= 0)
+            if (currentLocation != 1 || currentLocation != 4 || currentLocation != 7)//currentLocation - MAP_WIDTH >= 0)
             {
-                currentLocation -= MAP_WIDTH;
+                currentLocation -= 1;
             }
             return currentLocation;
         }

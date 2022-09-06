@@ -17,8 +17,8 @@ namespace ConsoleUI
             switch (userChoice)
             {
                 case '1':
-                    
-                    Console.WriteLine(MakeLists.playerRooms);
+                    MakeLists.RoomFileDisplay();
+                    //Console.WriteLine(MakeLists.playerRooms);
                     break;
                 case '2':
                     Console.WriteLine(MakeLists.gameWeapons);
@@ -43,6 +43,17 @@ namespace ConsoleUI
                     Exit();
                     break;
             }
+        }
+
+        public static void WriteMenu()
+        {
+            Console.WriteLine("1. View Rooms");
+            Console.WriteLine("2. View Weapons");
+            Console.WriteLine("3. View Potions");
+            Console.WriteLine("4. View Treasures");
+            Console.WriteLine("5. View Items");
+            Console.WriteLine("6. View Mobs");
+            Console.WriteLine("7. Back to Main");
         }
 
         public static void Exit()

@@ -94,7 +94,8 @@ namespace ConsoleUI
                         OptionsMenu.Exit();
                         break;
                     case '7':
-                        Console.WriteLine("Menu");
+                        OptionsMenu.WriteMenu();
+                        //Console.WriteLine("Menu");
                         char menuOption = Console.ReadLine()[0];
                         OptionsMenu.ExploreMenu(menuOption);
                         break;
