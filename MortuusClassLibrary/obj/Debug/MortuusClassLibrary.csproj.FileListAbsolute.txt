@@ -1,0 +1,17 @@
+E:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\MortuusClassLibrary\bin\Debug\MortuusClassLibrary.dll
+E:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\MortuusClassLibrary\bin\Debug\MortuusClassLibrary.pdb
+E:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\MortuusClassLibrary\obj\Debug\MortuusClassLibrary.csproj.CoreCompileInputs.cache
+E:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\MortuusClassLibrary\obj\Debug\MortuusClassLibrary.dll
+E:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\MortuusClassLibrary\obj\Debug\MortuusClassLibrary.pdb
+E:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\MortuusClassLibrary\obj\Debug\MortuusClassLibrary.csproj.AssemblyReference.cache
+D:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\MortuusClassLibrary\bin\Debug\MortuusClassLibrary.dll
+D:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\MortuusClassLibrary\bin\Debug\MortuusClassLibrary.pdb
+D:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\MortuusClassLibrary\obj\Debug\MortuusClassLibrary.csproj.AssemblyReference.cache
+D:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\MortuusClassLibrary\obj\Debug\MortuusClassLibrary.csproj.CoreCompileInputs.cache
+D:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\MortuusClassLibrary\obj\Debug\MortuusClassLibrary.dll
+D:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\MortuusClassLibrary\obj\Debug\MortuusClassLibrary.pdb
+D:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\MortuusClassLibrary\bin\Debug\Dapper.dll
+D:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\MortuusClassLibrary\bin\Debug\System.Data.SQLite.dll
+D:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\MortuusClassLibrary\bin\Debug\Dapper.xml
+D:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\MortuusClassLibrary\bin\Debug\System.Data.SQLite.xml
+D:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\MortuusClassLibrary\obj\Debug\MortuusClassLibrary.csproj.CopyComplete
