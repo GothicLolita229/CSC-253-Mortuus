@@ -1,7 +1,7 @@
-﻿1. Move North
+1. Move North
 2. Move South
 3. Move East
 4. Move West
 5. Attack
 6. Exit
-7. Menu
+7. Debug Menu
