@@ -14,14 +14,33 @@ namespace ConsoleUI
 
         static void Main(string[] args)
         {
-            Game();
+            //Game();
             //Console.WriteLine(MakeLists.ItemDisplay());
+            List<Room> roomTest = SqliteDataAccess.LoadRooms();
+
+
+            foreach (Room room in roomTest)
+            {
+                Console.WriteLine(room.Name);
+            }
+
+            List<Weapon> weaponTest = SqliteDataAccess.LoadWeapons();
+
+            foreach (Weapon weapon in weaponTest)
+            {
+                Console.WriteLine(weapon.DamageType);
+            }
+
+            Console.WriteLine();
+            Console.ReadKey();
         }
 
          static void Game()
         {
+
+
             //string charName = LoadPlayer.PlayerInfo();
-            GameMenuSwitcher.MainMenu();
+            //GameMenuSwitcher.MainMenu();
         }
 
     }

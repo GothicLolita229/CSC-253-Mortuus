@@ -8,12 +8,12 @@ namespace MortuusClassLibrary
 {
     public abstract class IngameItem
     {
-        private string _idNumber;
+        private int _idNumber;
         private string _name;
         private string _description;
         private string _price;
 
-        public IngameItem(string idNumber, string name, string description, string price)
+        public IngameItem(int idNumber, string name, string description, string price)
         {
             _idNumber = idNumber;
             _name = name;
@@ -22,27 +22,9 @@ namespace MortuusClassLibrary
 
         }
 
-        public string IDNumber
-        {
-            get { return _idNumber; }
-            set { }
-        }
-
-        public string Name
-        {
-            get { return _name; }
-            set { }
-        }
-
-        public string Description
-        {
-            get { return _description; }
-            set { }
-        }
-        public string Price
-        {
-            get { return _price; }
-            set { }
-        }
+        public int IDNumber { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Price { get; set; }
     }
 }

@@ -35,3 +35,66 @@ D:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\ConsoleUI\bin\Debug\System
 D:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\ConsoleUI\bin\Debug\Dapper.dll
 D:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\ConsoleUI\bin\Debug\System.Data.SQLite.xml
 D:\ASchool Fall 2022-Spring2023\Fall 2022\Mortuus VS5\ConsoleUI\bin\Debug\Dapper.xml
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\bin\Debug\MortuusDb.db
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\bin\Debug\Item.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\bin\Debug\Mobs.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\bin\Debug\potions.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\bin\Debug\rooms.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\bin\Debug\treasure.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\bin\Debug\weapons.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\bin\Debug\ConsoleUI.exe.config
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\bin\Debug\ConsoleUI.exe
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\bin\Debug\ConsoleUI.pdb
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\bin\Debug\MortuusClassLibrary.dll
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\bin\Debug\System.Data.SQLite.dll
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\bin\Debug\Dapper.dll
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\bin\Debug\MortuusClassLibrary.pdb
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\bin\Debug\System.Data.SQLite.xml
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\bin\Debug\Dapper.xml
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\obj\Debug\ConsoleUI.csproj.AssemblyReference.cache
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\obj\Debug\ConsoleUI.csproj.CoreCompileInputs.cache
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\obj\Debug\ConsoleUI.csproj.CopyComplete
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\obj\Debug\ConsoleUI.exe
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS7\ConsoleUI\obj\Debug\ConsoleUI.pdb
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\bin\Debug\MortuusDb.db
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\bin\Debug\Item.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\bin\Debug\Mobs.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\bin\Debug\potions.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\bin\Debug\rooms.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\bin\Debug\treasure.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\bin\Debug\weapons.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\bin\Debug\ConsoleUI.exe.config
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\bin\Debug\ConsoleUI.exe
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\bin\Debug\ConsoleUI.pdb
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\bin\Debug\MortuusClassLibrary.dll
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\bin\Debug\System.Data.SQLite.dll
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\bin\Debug\Dapper.dll
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\bin\Debug\MortuusClassLibrary.pdb
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\bin\Debug\System.Data.SQLite.xml
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\bin\Debug\Dapper.xml
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\obj\Debug\ConsoleUI.csproj.AssemblyReference.cache
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\obj\Debug\ConsoleUI.csproj.CoreCompileInputs.cache
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\obj\Debug\ConsoleUI.csproj.CopyComplete
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\obj\Debug\ConsoleUI.exe
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8\ConsoleUI\obj\Debug\ConsoleUI.pdb
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\bin\Debug\MortuusDb.db
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\bin\Debug\Item.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\bin\Debug\Mobs.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\bin\Debug\potions.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\bin\Debug\rooms.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\bin\Debug\treasure.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\bin\Debug\weapons.csv
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\bin\Debug\ConsoleUI.exe.config
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\bin\Debug\ConsoleUI.exe
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\bin\Debug\ConsoleUI.pdb
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\bin\Debug\MortuusClassLibrary.dll
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\bin\Debug\System.Data.SQLite.dll
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\bin\Debug\Dapper.dll
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\bin\Debug\MortuusClassLibrary.pdb
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\bin\Debug\System.Data.SQLite.xml
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\bin\Debug\Dapper.xml
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\obj\Debug\ConsoleUI.csproj.AssemblyReference.cache
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\obj\Debug\ConsoleUI.csproj.CoreCompileInputs.cache
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\obj\Debug\ConsoleUI.csproj.CopyComplete
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\obj\Debug\ConsoleUI.exe
+D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\obj\Debug\ConsoleUI.pdb

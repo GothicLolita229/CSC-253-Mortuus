@@ -35,7 +35,8 @@ namespace MortuusClassLibrary
                 string[] tokens = item.Split(',');
                 //Console.WriteLine(tokens[0] + " " + " " + tokens[1] + " " + tokens[2]+ " " + tokens[3]+ " " + tokens[4] + " ");
                 //isQuestItem = bool.Parse(tokens[3]);
-                Item gameItem = new Item(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4]);
+                int id = int.Parse(tokens[0]);
+                Item gameItem = new Item(id, tokens[1], tokens[2], tokens[3], tokens[4]);
                 gameItems.Add(gameItem);
                 //Console.WriteLine(gameItem.ToString());
             }
@@ -108,9 +109,9 @@ namespace MortuusClassLibrary
             foreach (string weapon in weapons)
             {
                 string[] tokens = weapon.Split(',');
-                int damage;
-                damage = int.Parse(tokens[4]);
-                Weapon gameWeapon = new Weapon(tokens[0], tokens[1], tokens[2], tokens[3], damage, tokens[5]);
+                int id = int.Parse(tokens[0]);
+                int damage = int.Parse(tokens[4]);
+                Weapon gameWeapon = new Weapon(id, tokens[1], tokens[2], tokens[3], damage, tokens[5]);
                 gameWeapons.Add(gameWeapon);
             }
             foreach (var weapon in gameWeapons)
@@ -125,11 +126,10 @@ namespace MortuusClassLibrary
             foreach (string potion in potions)
             {
                 string[] tokens = potion.Split(',');
-                int valueChange;
-                int healthPotion;
-                valueChange = int.Parse(tokens[4]);
-                healthPotion = int.Parse(tokens[5]);
-                Potion gamePotion = new Potion(tokens[0], tokens[1], tokens[2], tokens[3], valueChange, healthPotion);
+                int id = int.Parse(tokens[0]);
+                int valueChange = int.Parse(tokens[4]);
+                int healthPotion = int.Parse(tokens[5]);
+                Potion gamePotion = new Potion(id, tokens[1], tokens[2], tokens[3], valueChange, healthPotion);
                 gamePotions.Add(gamePotion);
             }
             foreach (var potion in gamePotions)
@@ -144,7 +144,8 @@ namespace MortuusClassLibrary
             foreach (string treasure in treasures)
             {
                 string[] tokens = treasure.Split(',');
-                Treasure gameTreasure = new Treasure(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4]);
+                int id = int.Parse(tokens[0]);
+                Treasure gameTreasure = new Treasure(id, tokens[1], tokens[2], tokens[3], tokens[4]);
                 gameTreasures.Add(gameTreasure);
             }
             foreach (var treasure in gameTreasures)
