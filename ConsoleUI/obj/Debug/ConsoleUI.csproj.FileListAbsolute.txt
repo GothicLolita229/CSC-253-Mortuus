@@ -98,3 +98,24 @@ D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\obj\Debug\
 D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\obj\Debug\ConsoleUI.csproj.CopyComplete
 D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\obj\Debug\ConsoleUI.exe
 D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS8 - Copy\ConsoleUI\obj\Debug\ConsoleUI.pdb
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\bin\Debug\MortuusDb.db
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\bin\Debug\Item.csv
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\bin\Debug\Mobs.csv
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\bin\Debug\potions.csv
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\bin\Debug\rooms.csv
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\bin\Debug\treasure.csv
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\bin\Debug\weapons.csv
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\bin\Debug\ConsoleUI.exe.config
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\bin\Debug\ConsoleUI.exe
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\bin\Debug\ConsoleUI.pdb
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\bin\Debug\MortuusClassLibrary.dll
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\bin\Debug\System.Data.SQLite.dll
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\bin\Debug\Dapper.dll
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\bin\Debug\MortuusClassLibrary.pdb
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\bin\Debug\System.Data.SQLite.xml
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\bin\Debug\Dapper.xml
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\obj\Debug\ConsoleUI.csproj.AssemblyReference.cache
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\obj\Debug\ConsoleUI.csproj.CoreCompileInputs.cache
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\obj\Debug\ConsoleUI.csproj.CopyComplete
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\obj\Debug\ConsoleUI.exe
+C:\Users\linaresl1836\Documents\GitHub\CSC-253-Mortuus\ConsoleUI\obj\Debug\ConsoleUI.pdb
