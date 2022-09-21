@@ -8,7 +8,7 @@ namespace MortuusClassLibrary
 {
     public class Weapon : IngameItem
     {
-        
+        public Weapon(): base() { }
         public Weapon(int idNumber, string name, string description, string damageType, int damage, string price)
             : base(idNumber, name, description, price)
         {

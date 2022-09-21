@@ -24,12 +24,24 @@ namespace ConsoleUI
                 Console.WriteLine(room.Name);
             }
 
+            Console.WriteLine();
             List<Weapon> weaponTest = SqliteDataAccess.LoadWeapons();
 
             foreach (Weapon weapon in weaponTest)
             {
-                Console.WriteLine(weapon.DamageType);
+                Console.WriteLine(weapon.Name);
             }
+
+            Console.WriteLine();
+            List<Treasure> treasureTest = SqliteDataAccess.LoadTreasure();
+
+
+            foreach (Treasure thing in treasureTest)
+            {
+                Console.WriteLine(thing.Name);
+            }
+
+            
 
             Console.WriteLine();
             Console.ReadKey();

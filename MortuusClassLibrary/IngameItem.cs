@@ -13,6 +13,7 @@ namespace MortuusClassLibrary
         private string _description;
         private string _price;
 
+        public IngameItem() { }
         public IngameItem(int idNumber, string name, string description, string price)
         {
             _idNumber = idNumber;
@@ -21,6 +22,10 @@ namespace MortuusClassLibrary
             _price = price;
 
         }
+
+        /*protected IngameItem()
+        {
+        }*/
 
         public int IDNumber { get; set; }
         public string Name { get; set; }

@@ -17,6 +17,7 @@ namespace MortuusClassLibrary
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
                 var output = cnn.Query<Room>("SELECT * FROM RoomsTable", new DynamicParameters());
+           
 
 
                 return output.ToList();
@@ -27,7 +28,18 @@ namespace MortuusClassLibrary
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<Weapon>("SELECT * FROM WeaponsTable", new DynamicParameters());
+                var output = cnn.Query<Weapon>("SELECT Name FROM WeaponsTable", new DynamicParameters());
+
+
+                return output.ToList();
+            }
+        }
+
+        public static List<Treasure> LoadTreasure()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<Treasure>("SELECT Name FROM TreasuresTable", new DynamicParameters());
 
 
                 return output.ToList();
