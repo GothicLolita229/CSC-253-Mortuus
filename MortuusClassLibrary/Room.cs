@@ -13,9 +13,7 @@ namespace MortuusClassLibrary
 
         public List<Item> inventory;
 
-        public Room()
-        {
-        }
+        public Room(){}
 
         public Room(string idNumber, string name, string description, string exit)
         {
@@ -53,7 +51,16 @@ namespace MortuusClassLibrary
             return rooms;
         }
 
-       
+        public static List<Room> RoomExitDisplay()
+        {
+            foreach (Room room in rooms)
+            {
+                Console.WriteLine(room.Exit);
+            }
+            return rooms;
+        }
+
+
 
 
 

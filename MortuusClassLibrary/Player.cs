@@ -10,10 +10,10 @@ namespace MortuusClassLibrary
 {
     public class Player: LivingCreature
     {
-        private string _password;
+        /*private string _password;
         private int _location = 0;
         private List<Item> _inventory; //TODO Write the code to back these two up
-        private List<Item> _quests;
+        private List<Item> _quests;*/
 
         public Player(string idNumber, string name, string race, string lcclass, string description, int hp, int ac, string password, int location, string inventory, string quests)
             : base(idNumber, name, race, lcclass, description, hp, ac)
