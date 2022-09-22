@@ -18,13 +18,13 @@ namespace MortuusClassLibrary
         //public static List<string> rooms = ReadFile.FileReader("Rooms.csv"); TEST
         public static List<string> weapons = ReadFile.FileReader("Weapons.csv");
         //public static List<string> potions = ReadFile.FileReader("Potions.csv"); TEST
-        public static List<string> treasures = ReadFile.FileReader("Treasure.csv");
+        //public static List<string> treasures = ReadFile.FileReader("Treasure.csv"); TEST
 
         //public static List<Room> playerRooms = new List<Room>(); TEST
         //public static List<Item> gameItems = new List<Item>(); TEST
         public static List<Mob> gameMobs = new List<Mob>(); 
         public static List<Weapon> gameWeapons = new List<Weapon>();
-        public static List<Treasure> gameTreasures = new List<Treasure>();
+        //public static List<Treasure> gameTreasures = new List<Treasure>(); TEST
         //public static List<Potion> gamePotions = new List<Potion>(); TEST
 
         /*public static List<Item> ItemsFileReader()
@@ -161,7 +161,7 @@ namespace MortuusClassLibrary
             return gamePotions;
         }*/
 
-        public static List<Treasure> TreasureFileReader()
+        /*public static List<Treasure> TreasureFileReader()
         {
             foreach (string treasure in treasures)
             {
@@ -175,7 +175,7 @@ namespace MortuusClassLibrary
                 Console.WriteLine(treasure.Name);
             }
             return gameTreasures;
-        }
+        }*/
 
         public static List<string> MainMenu()
         {

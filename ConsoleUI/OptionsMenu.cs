@@ -27,7 +27,7 @@ namespace ConsoleUI
                     Console.WriteLine(Potion.potions);
                     break;
                 case '4':
-                    Console.WriteLine(MakeLists.gameTreasures);
+                    Console.WriteLine(Treasure.treasures);
                     break;
                 case '5':
                     Item.ItemDisplay();

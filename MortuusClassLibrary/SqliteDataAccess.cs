@@ -48,7 +48,7 @@ namespace MortuusClassLibrary
             }
         }
 
-        public static List<Treasure> LoadTreasure()
+        public static List<Treasure> LoadTreasures()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
