@@ -114,7 +114,7 @@ namespace MortuusClassLibrary
             }
             return playerRooms;
         }*/
-        public static List<Room> RoomDisplay()
+        /*public static List<Room> RoomDisplay()
         { 
         List<Room> roomTest = SqliteDataAccess.LoadRooms();
 
@@ -124,7 +124,8 @@ namespace MortuusClassLibrary
                 Console.WriteLine(room.Name);
             }
             return roomTest;
-        }
+        }*/
+
     public static List<Weapon> WeaponsFileReader()
         {
             foreach (string weapon in weapons)

@@ -9,7 +9,7 @@ namespace MortuusClassLibrary
 {
     public class Room
     {
-        public static List<Room> roomTest = SqliteDataAccess.LoadRooms();
+        public static List<Room> rooms = SqliteDataAccess.LoadRooms();
 
         public List<Item> inventory;
 
@@ -42,6 +42,15 @@ namespace MortuusClassLibrary
         public static void addWeapon(Weapon newWeapon, List<Weapon> playerInventory)
         {
             playerInventory.Add(newWeapon);
+        }
+
+        public static List<Room> RoomDisplay()
+        {
+            foreach (Room room in rooms)
+            {
+                Console.WriteLine(room.Name);
+            }
+            return rooms;
         }
 
     }

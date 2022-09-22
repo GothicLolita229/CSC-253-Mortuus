@@ -35,7 +35,7 @@ namespace ConsoleUI
                 userChoice = Console.ReadLine()[0];
                 Console.WriteLine("\n");
                 //Room thisRoom = MakeLists.playerRooms[currentLocation]; TEST
-                Room thisRoom = Room.roomTest[currentLocation];
+                Room thisRoom = Room.rooms[currentLocation];
                 //Console.WriteLine($"You are in {thisRoom.Name} ( {thisRoom.IdNumber} )"); TEST
                 //Console.WriteLine(thisRoom.Description); TEST
                 //Console.WriteLine($"Your exits are {thisRoom.Exit}"); TEST
@@ -51,7 +51,7 @@ namespace ConsoleUI
                         currentLocation = MovePlayer.MoveNorth(ref currentLocation);
                         //Console.WriteLine($"You are in {thisRoom.Name} {thisRoom.IdNumber}");
                         //if (currentLocation > MakeLists.playerRooms.Count - 1) TEST
-                        if (currentLocation > Room.roomTest.Count - 1)
+                        if (currentLocation > Room.rooms.Count - 1)
                         {
                             Console.WriteLine("Please stop banging your head on the dungeon wall. " +
                                 "You must turn around and go back because this is the end.");

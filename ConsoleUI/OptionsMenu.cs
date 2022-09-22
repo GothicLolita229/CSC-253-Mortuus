@@ -17,7 +17,7 @@ namespace ConsoleUI
             switch (userChoice)
             {
                 case '1':
-                    MakeLists.RoomDisplay(); 
+                    Room.RoomDisplay(); 
                     //Console.WriteLine(MakeLists.playerRooms);
                     break;
                 case '2':
