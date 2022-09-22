@@ -16,6 +16,7 @@ namespace MortuusClassLibrary
         private int _hp;
         private int _ac;
 
+        public LivingCreature() { }
         public LivingCreature(string idNumber, string name, string race, string lcclass, string description, int hp, int ac)
         {
             _idNumber = idNumber;

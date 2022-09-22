@@ -8,6 +8,7 @@ namespace MortuusClassLibrary
 {
     public class Mob : LivingCreature
     {
+        public Mob() : base() { }
         public Mob(string idNumber, string name, string race, string mobClass, int hp, int ac, string weapon, string description, string inventory)
             : base(idNumber, name, race, mobClass, description, hp, ac)
         {

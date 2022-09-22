@@ -11,6 +11,8 @@ namespace MortuusClassLibrary
         private int _valueChange;
         private int _healthPotion = 20;
 
+        public Potion() : base() { }
+
         public Potion(int idNumber, string name, string description, string price, int valueChange, int healthPotion)
             : base(idNumber, name, description, price)
         {
