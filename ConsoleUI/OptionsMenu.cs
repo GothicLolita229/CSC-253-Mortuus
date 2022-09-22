@@ -17,7 +17,7 @@ namespace ConsoleUI
             switch (userChoice)
             {
                 case '1':
-                    MakeLists.RoomFileDisplay(); 
+                    MakeLists.RoomDisplay(); 
                     //Console.WriteLine(MakeLists.playerRooms);
                     break;
                 case '2':
@@ -30,8 +30,8 @@ namespace ConsoleUI
                     Console.WriteLine(MakeLists.gameTreasures);
                     break;
                 case '5':
-                    MakeLists.ItemsFileReader();
-                    Console.WriteLine(MakeLists.gameItems);
+                    Item.ItemDisplay();
+                    Console.WriteLine(Item.items);
                     break;
                 case '6':
                     Console.WriteLine(MakeLists.gameMobs);

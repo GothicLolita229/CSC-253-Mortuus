@@ -13,21 +13,21 @@ namespace MortuusClassLibrary
         public static List<Weapon> weaponInventoryList = new List<Weapon>();
 
 
-        public static List<string> items = ReadFile.FileReader("Item.csv");
-        public static List<string> mobs = ReadFile.FileReader("Mobs.csv");
-        //public static List<string> rooms = ReadFile.FileReader("Rooms.csv");
+        //public static List<string> items = ReadFile.FileReader("Item.csv"); TEST
+        public static List<string> mobs = ReadFile.FileReader("Mobs.csv"); 
+        //public static List<string> rooms = ReadFile.FileReader("Rooms.csv"); TEST
         public static List<string> weapons = ReadFile.FileReader("Weapons.csv");
         public static List<string> potions = ReadFile.FileReader("Potions.csv");
         public static List<string> treasures = ReadFile.FileReader("Treasure.csv");
 
-        //public static List<Room> playerRooms = new List<Room>();
-        public static List<Item> gameItems = new List<Item>();
-        public static List<Mob> gameMobs = new List<Mob>();
+        //public static List<Room> playerRooms = new List<Room>(); TEST
+        //public static List<Item> gameItems = new List<Item>(); TEST
+        public static List<Mob> gameMobs = new List<Mob>(); 
         public static List<Weapon> gameWeapons = new List<Weapon>();
         public static List<Treasure> gameTreasures = new List<Treasure>();
         public static List<Potion> gamePotions = new List<Potion>();
 
-        public static List<Item> ItemsFileReader()
+        /*public static List<Item> ItemsFileReader()
         {
             foreach (string item in items)
             {
@@ -45,7 +45,7 @@ namespace MortuusClassLibrary
                 Console.WriteLine(item.Name);
             }
             return gameItems;
-        }
+        }*/
 
         /*public static List<Item> ItemDisplay(List<Item>gameItems)
         {
@@ -54,6 +54,17 @@ namespace MortuusClassLibrary
                 Console.WriteLine(items);
             }
             return gameItems;
+        }*/
+        /*public static List<Item> ItemDisplay()
+        {
+            List<Item> itemList = SqliteDataAccess.LoadItems();
+
+
+            foreach (Item item in itemList)
+            {
+                Console.WriteLine(item.Name);
+            }
+            return itemList;
         }*/
 
         public static List<Mob> MobsFileReader()
@@ -103,7 +114,7 @@ namespace MortuusClassLibrary
             }
             return playerRooms;
         }*/
-        public static List<Room> RoomFileDisplay()
+        public static List<Room> RoomDisplay()
         { 
         List<Room> roomTest = SqliteDataAccess.LoadRooms();
 
