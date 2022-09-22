@@ -24,7 +24,8 @@ namespace ConsoleUI
             
             Console.WriteLine("\nMAIN MENU: \n");
             MakeLists.MainMenu();
-            MakeLists.RoomFileReader();
+            //MakeLists.RoomFileReader(); TEST
+            
             do
             {
                 //userChoice = Console.ReadLine()[0];
@@ -33,7 +34,12 @@ namespace ConsoleUI
                 Console.Write($"{charName}, enter numeric value from menu to select an option: ");
                 userChoice = Console.ReadLine()[0];
                 Console.WriteLine("\n");
-                Room thisRoom = MakeLists.playerRooms[currentLocation];
+                //Room thisRoom = MakeLists.playerRooms[currentLocation]; TEST
+                Room thisRoom = Room.roomTest[currentLocation];
+                //Console.WriteLine($"You are in {thisRoom.Name} ( {thisRoom.IdNumber} )"); TEST
+                //Console.WriteLine(thisRoom.Description); TEST
+                //Console.WriteLine($"Your exits are {thisRoom.Exit}"); TEST
+
                 Console.WriteLine($"You are in {thisRoom.Name} ( {thisRoom.IdNumber} )");
                 Console.WriteLine(thisRoom.Description);
                 Console.WriteLine($"Your exits are {thisRoom.Exit}");
@@ -44,7 +50,8 @@ namespace ConsoleUI
                     case '1':
                         currentLocation = MovePlayer.MoveNorth(ref currentLocation);
                         //Console.WriteLine($"You are in {thisRoom.Name} {thisRoom.IdNumber}");
-                        if (currentLocation > MakeLists.playerRooms.Count - 1)
+                        //if (currentLocation > MakeLists.playerRooms.Count - 1) TEST
+                        if (currentLocation > Room.roomTest.Count - 1)
                         {
                             Console.WriteLine("Please stop banging your head on the dungeon wall. " +
                                 "You must turn around and go back because this is the end.");

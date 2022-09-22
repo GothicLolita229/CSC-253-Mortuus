@@ -14,9 +14,9 @@ namespace ConsoleUI
 
         static void Main(string[] args)
         {
-            //Game();
+            Game();
             //Console.WriteLine(MakeLists.ItemDisplay());
-            List<Room> roomTest = SqliteDataAccess.LoadRooms();
+            /*List<Room> roomTest = SqliteDataAccess.LoadRooms();
 
 
             foreach (Room room in roomTest)
@@ -44,7 +44,7 @@ namespace ConsoleUI
             
 
             Console.WriteLine();
-            Console.ReadKey();
+            Console.ReadKey();*/
         }
 
          static void Game()
@@ -52,7 +52,7 @@ namespace ConsoleUI
 
 
             //string charName = LoadPlayer.PlayerInfo();
-            //GameMenuSwitcher.MainMenu();
+            GameMenuSwitcher.MainMenu();
         }
 
     }

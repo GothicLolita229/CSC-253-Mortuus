@@ -9,6 +9,8 @@ namespace MortuusClassLibrary
 {
     public class Room
     {
+        public static List<Room> roomTest = SqliteDataAccess.LoadRooms();
+
         public List<Item> inventory;
 
         public Room()

@@ -15,12 +15,12 @@ namespace MortuusClassLibrary
 
         public static List<string> items = ReadFile.FileReader("Item.csv");
         public static List<string> mobs = ReadFile.FileReader("Mobs.csv");
-        public static List<string> rooms = ReadFile.FileReader("Rooms.csv");
+        //public static List<string> rooms = ReadFile.FileReader("Rooms.csv");
         public static List<string> weapons = ReadFile.FileReader("Weapons.csv");
         public static List<string> potions = ReadFile.FileReader("Potions.csv");
         public static List<string> treasures = ReadFile.FileReader("Treasure.csv");
 
-        public static List<Room> playerRooms = new List<Room>();
+        //public static List<Room> playerRooms = new List<Room>();
         public static List<Item> gameItems = new List<Item>();
         public static List<Mob> gameMobs = new List<Mob>();
         public static List<Weapon> gameWeapons = new List<Weapon>();
@@ -75,7 +75,7 @@ namespace MortuusClassLibrary
             return gameMobs;
 
         }
-        public static void RoomFileReader()
+        /*public static void RoomFileReader()  TEST
         {
             foreach (var room in rooms)
             {
@@ -102,9 +102,19 @@ namespace MortuusClassLibrary
              Console.WriteLine(room.Name);
             }
             return playerRooms;
-        }
+        }*/
+        public static List<Room> RoomFileDisplay()
+        { 
+        List<Room> roomTest = SqliteDataAccess.LoadRooms();
 
-        public static List<Weapon> WeaponsFileReader()
+
+            foreach (Room room in roomTest)
+            {
+                Console.WriteLine(room.Name);
+            }
+            return roomTest;
+        }
+    public static List<Weapon> WeaponsFileReader()
         {
             foreach (string weapon in weapons)
             {
