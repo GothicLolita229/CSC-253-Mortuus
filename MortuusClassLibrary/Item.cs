@@ -19,14 +19,11 @@ namespace MortuusClassLibrary
 
         public static List<Item> ItemDisplay()
         {
-            List<Item> itemList = SqliteDataAccess.LoadItems();
-
-
-            foreach (Item item in itemList)
+            foreach (Item item in items)
             {
                 Console.WriteLine(item.Name);
             }
-            return itemList;
+            return items;
         }
     }
 }

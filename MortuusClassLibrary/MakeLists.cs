@@ -17,7 +17,7 @@ namespace MortuusClassLibrary
         public static List<string> mobs = ReadFile.FileReader("Mobs.csv"); 
         //public static List<string> rooms = ReadFile.FileReader("Rooms.csv"); TEST
         public static List<string> weapons = ReadFile.FileReader("Weapons.csv");
-        public static List<string> potions = ReadFile.FileReader("Potions.csv");
+        //public static List<string> potions = ReadFile.FileReader("Potions.csv"); TEST
         public static List<string> treasures = ReadFile.FileReader("Treasure.csv");
 
         //public static List<Room> playerRooms = new List<Room>(); TEST
@@ -25,7 +25,7 @@ namespace MortuusClassLibrary
         public static List<Mob> gameMobs = new List<Mob>(); 
         public static List<Weapon> gameWeapons = new List<Weapon>();
         public static List<Treasure> gameTreasures = new List<Treasure>();
-        public static List<Potion> gamePotions = new List<Potion>();
+        //public static List<Potion> gamePotions = new List<Potion>(); TEST
 
         /*public static List<Item> ItemsFileReader()
         {
@@ -143,7 +143,7 @@ namespace MortuusClassLibrary
             return gameWeapons;
         }
 
-        public static List<Potion> PotionsFileReader()
+        /*public static List<Potion> PotionsFileReader()
         {
             foreach (string potion in potions)
             {
@@ -159,7 +159,7 @@ namespace MortuusClassLibrary
                 Console.WriteLine(potion.Name);
             }
             return gamePotions;
-        }
+        }*/
 
         public static List<Treasure> TreasureFileReader()
         {

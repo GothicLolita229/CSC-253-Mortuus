@@ -39,6 +39,15 @@ namespace MortuusClassLibrary
             }
         }
 
+        public static List<Potion> LoadPotions()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<Potion>("SELECT Name FROM PotionsTable", new DynamicParameters());
+                return output.ToList();
+            }
+        }
+
         public static List<Treasure> LoadTreasure()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
