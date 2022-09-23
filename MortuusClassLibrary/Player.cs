@@ -15,7 +15,7 @@ namespace MortuusClassLibrary
         private List<Item> _inventory; //TODO Write the code to back these two up
         private List<Item> _quests;*/
 
-        public Player(int id, string name, string race, string lcclass, string description, int hp, int ac, string password, int location, string inventory, string quests)
+        public Player(int id, string name, string race, string lcclass, string description, int hp, int ac, string password, int location, List<Item> inventory, List<Item> quests)
             : base(id, name, race, lcclass, description, hp, ac)
         {
             
@@ -25,10 +25,9 @@ namespace MortuusClassLibrary
 
         public string Password { get; set; }
         public int Location { get; set; }
-        public static int HP { get; set; }
         public List<Item> Inventory {get; set;}
         public List<Item> Quests { get; set; }
-        public static bool checkPassword(ref string password)
+        public static bool CheckPassword(ref string password)
         {
             var regexItem = new Regex("[a-zA-Z0-9 ]");
 

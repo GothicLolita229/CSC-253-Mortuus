@@ -10,8 +10,6 @@ namespace ConsoleUI
 {
     class Program
     {
-        List<Item> gameItems = new List<Item>();
-
         static void Main(string[] args)
         {
             Room.RoomDisplay();

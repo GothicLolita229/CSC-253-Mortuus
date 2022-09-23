@@ -8,7 +8,7 @@ namespace MortuusClassLibrary
 {
     public class CombatSystem
     {
-        public static int Hp = Player.HP;
+        public int Hp = Player.HP;
         //public static int newHp = 0;
         //public static int damage = 0;
         public static int AttackPoints()
@@ -26,7 +26,7 @@ namespace MortuusClassLibrary
         }
         public static int CalcHealth(ref int Hp, int damage)
         {
-            Hp = Hp - damage;
+            Hp -= damage;
             return Hp;
         }
     }

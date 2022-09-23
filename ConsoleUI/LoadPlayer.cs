@@ -30,7 +30,7 @@ namespace ConsoleUI
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error checking file...");
+                Console.WriteLine("Error checking file...", ex.Message);
             }
             return charName;
         }

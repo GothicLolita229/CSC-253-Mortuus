@@ -10,16 +10,16 @@ namespace MortuusClassLibrary
     {
         public static List<Potion> potions = SqliteDataAccess.LoadPotions();
 
-        private int _valueChange;
-        private int _healthPotion = 20;
+        //private int _valueChange;
+        //private int _healthPotion = 20;
 
         public Potion() : base() { }
 
         public Potion(int idNumber, string name, string description, string price, int valueChange, int healthPotion)
             : base(idNumber, name, description, price)
         {
-            _valueChange = valueChange;
-            _healthPotion = healthPotion;
+            ValueChange = valueChange;
+            HealthPotion = healthPotion;
         }
         public int ValueChange { get; set; }
         public int HealthPotion { get; set; }
