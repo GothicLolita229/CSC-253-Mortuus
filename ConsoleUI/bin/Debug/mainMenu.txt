@@ -4,4 +4,4 @@
 4. Move West
 5. Attack
 6. Exit
-7. Debug Menu
+7. Menu
