@@ -37,7 +37,7 @@ namespace ConsoleUI
 
                 Console.WriteLine($"You are in {thisRoom.Name} ( {thisRoom.IdNumber} )");
                 Console.WriteLine(thisRoom.Description);
-                Console.WriteLine($"Your exits are {thisRoom.Exit}"); // TODO Find out why this isn't displaying
+                Console.WriteLine($"Your exits are {thisRoom.Exits}"); // TODO Find out why this isn't displaying
                 //userChoice = Console.ReadLine()[0];
 
                 switch (userChoice)

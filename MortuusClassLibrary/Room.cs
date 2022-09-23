@@ -11,16 +11,17 @@ namespace MortuusClassLibrary
     {
         public static List<Room> rooms = SqliteDataAccess.LoadRooms();
 
+
         public List<Item> inventory;
 
         public Room(){}
 
-        public Room(string idNumber, string name, string description, string exit)
+        public Room(string idNumber, string name, string description, string exits)
         {
             IdNumber = idNumber;
             Name = name;
             Description = description;
-            Exit = exit;
+            Exits = exits;
             inventory = new List<Item>();
         }
         public string Name { get; set; }
@@ -29,7 +30,7 @@ namespace MortuusClassLibrary
         
         public string Description { get; set; }
        
-        public string Exit { get; set; }
+        public string Exits { get; set; }
 
 
         public static void addItem(Item newItem, List<Item> playerInventory)
@@ -51,11 +52,12 @@ namespace MortuusClassLibrary
             return rooms;
         }
 
-        public static List<Room> RoomExitDisplay()
+        
+        public static List<Room> RoomExitDisplay() // TEST
         {
             foreach (Room room in rooms)
             {
-                Console.WriteLine(room.Exit);
+                Console.WriteLine(room.Exits);
             }
             return rooms;
         }

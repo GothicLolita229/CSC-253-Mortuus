@@ -34,7 +34,7 @@ namespace ConsoleUI
                     Console.WriteLine(Item.items);
                     break;
                 case '6':
-                    Console.WriteLine(MakeLists.gameMobs);
+                    Console.WriteLine(Mob.mobs);
                     break;
                 case '7':
                     GameMenuSwitcher.MainMenu();

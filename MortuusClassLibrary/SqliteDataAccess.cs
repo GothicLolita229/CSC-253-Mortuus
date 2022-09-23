@@ -12,6 +12,30 @@ namespace MortuusClassLibrary
 {
     public class SqliteDataAccess
     {
+        public static List<Player> LoadPlayers()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<Player>("SELECT * FROM PlayerTable", new DynamicParameters());
+                return output.ToList();
+            }
+        }
+        public static void SavePlayer(Player player)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("insert into PlayerTable (ID, Name, Race, LcClass, Description, HP, AC, Password, Location) values (@ID, @Name, @Race, @LcClass, @Description, @HP, @AC, @Password, @Location)", player);
+            }
+        }
+
+        public static List<Mob> LoadMobs()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<Mob>("SELECT * FROM MobsTable", new DynamicParameters());
+                return output.ToList();
+            }
+        }
         public static List<Room> LoadRooms()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
