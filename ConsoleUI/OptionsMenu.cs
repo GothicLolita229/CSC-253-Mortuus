@@ -61,5 +61,16 @@ namespace ConsoleUI
             Environment.Exit(0);
         }
 
+        public static List<string> MainMenu()
+        {
+            List<string> menuList = ReadFile.FileReader("mainMenu.txt");
+            //optionList.Sort();
+            foreach (var option in menuList)
+            {
+                Console.WriteLine(option);
+            }
+            return menuList;
+        }
+
     }
 }

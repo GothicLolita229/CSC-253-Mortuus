@@ -54,7 +54,6 @@
     <Compile Include="IngameItem.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="LivingCreature.cs" />
-    <Compile Include="MakeLists.cs" />
     <Compile Include="Mob.cs" />
     <Compile Include="MovePlayer.cs" />
     <Compile Include="Player.cs" />

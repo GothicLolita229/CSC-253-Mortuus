@@ -23,8 +23,6 @@ namespace ConsoleUI
 
          static void Game()
         {
-
-
             //string charName = LoadPlayer.PlayerInfo();
             GameMenuSwitcher.MainMenu();
         }
