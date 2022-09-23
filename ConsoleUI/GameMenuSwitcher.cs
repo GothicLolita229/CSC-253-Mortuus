@@ -22,7 +22,7 @@ namespace ConsoleUI
             char userChoice;
             
             Console.WriteLine("\nMAIN MENU: \n");
-            OptionsMenu.MainMenu();
+            OptionsMenu.HelpMenu();
             
             do
             {
@@ -87,7 +87,7 @@ namespace ConsoleUI
                         OptionsMenu.Exit();
                         break;
                     case '7':
-                        OptionsMenu.WriteMenu();
+                        OptionsMenu.WriteExploreMenu();
                         //Console.WriteLine("Menu");
                         char menuOption = Console.ReadLine()[0];
                         OptionsMenu.ExploreMenu(menuOption);

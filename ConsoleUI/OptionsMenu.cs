@@ -45,7 +45,7 @@ namespace ConsoleUI
             }
         }
 
-        public static void WriteMenu()
+        public static void WriteExploreMenu()
         {
             Console.WriteLine("1. View Rooms");
             Console.WriteLine("2. View Weapons");
@@ -61,15 +61,15 @@ namespace ConsoleUI
             Environment.Exit(0);
         }
 
-        public static List<string> MainMenu()
+        public static void HelpMenu()
         {
-            List<string> menuList = ReadFile.FileReader("mainMenu.txt");
-            //optionList.Sort();
-            foreach (var option in menuList)
-            {
-                Console.WriteLine(option);
-            }
-            return menuList;
+            Console.WriteLine("1. Move North");
+            Console.WriteLine("2. Move South");
+            Console.WriteLine("3. Move East");
+            Console.WriteLine("4. Move West");
+            Console.WriteLine("5. Attack");
+            Console.WriteLine("6. Exit");
+            Console.WriteLine("7. Menu");
         }
 
     }
