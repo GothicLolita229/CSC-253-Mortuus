@@ -66,11 +66,6 @@
     <Compile Include="Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="CSV Files\Item.csv" />
-    <None Include="CSV Files\Mobs.csv" />
-    <None Include="CSV Files\potions.csv" />
-    <None Include="CSV Files\treasure.csv" />
-    <None Include="CSV Files\weapons.csv" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
