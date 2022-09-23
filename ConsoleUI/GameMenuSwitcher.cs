@@ -22,7 +22,7 @@ namespace ConsoleUI
             char userChoice;
             
             Console.WriteLine("\nMAIN MENU: \n");
-            MakeLists.MainMenu();
+            OptionsMenu.MainMenu();
             
             do
             {
