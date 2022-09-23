@@ -25,7 +25,7 @@ namespace MortuusClassLibrary
 
         public string Password { get; set; }
         public int Location { get; set; }
-        public static int Hp { get; set; }
+        public static int HP { get; set; }
         public List<Item> Inventory {get; set;}
         public List<Item> Quests { get; set; }
         public static bool checkPassword(ref string password)

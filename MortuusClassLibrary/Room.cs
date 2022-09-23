@@ -33,12 +33,12 @@ namespace MortuusClassLibrary
         public string Exits { get; set; }
 
 
-        public static void addItem(Item newItem, List<Item> playerInventory)
+        public static void AddItem(Item newItem, List<Item> playerInventory)
         {
             playerInventory.Add(newItem);
         }
 
-        public static void addWeapon(Weapon newWeapon, List<Weapon> playerInventory)
+        public static void AddWeapon(Weapon newWeapon, List<Weapon> playerInventory)
         {
             playerInventory.Add(newWeapon);
         }

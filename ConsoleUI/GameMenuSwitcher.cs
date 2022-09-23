@@ -11,15 +11,14 @@ namespace ConsoleUI
     public class GameMenuSwitcher
     {
         //public static char userChoice; //where is this coming from? because I think that's why game doesn't continue
-        //TODO add current location to hold players location
-        public static int currentLocation = 0;
+        public static int currentLocation = 0; // =Player.player.Location; ???
         
         public static void MainMenu()
         {
             string charName = "Ciara"; //LoadPlayer.PlayerInfo();
             //char userChoice;
-            int damage = CombatSystem.damage;
-            int hp = Player.Hp;
+            int damage; // = CombatSystem.damage;
+            int hp = Player.HP;
             char userChoice;
             
             Console.WriteLine("\nMAIN MENU: \n");
@@ -27,9 +26,6 @@ namespace ConsoleUI
             
             do
             {
-                //userChoice = Console.ReadLine()[0];
-                //OptionsMenu.ExploreMenu(userChoice);
-                
                 Console.Write($"{charName}, enter numeric value from menu to select an option: ");
                 userChoice = Console.ReadLine()[0];
                 Console.WriteLine("\n");
@@ -37,14 +33,13 @@ namespace ConsoleUI
 
                 Console.WriteLine($"You are in {thisRoom.Name} ( {thisRoom.IdNumber} )");
                 Console.WriteLine(thisRoom.Description);
-                Console.WriteLine($"Your exits are {thisRoom.Exits}"); // TODO Find out why this isn't displaying
+                Console.WriteLine($"Your exits are {thisRoom.Exits}"); 
                 //userChoice = Console.ReadLine()[0];
 
                 switch (userChoice)
                 {
                     case '1':
                         currentLocation = MovePlayer.MoveNorth(ref currentLocation);
-                        //Console.WriteLine($"You are in {thisRoom.Name} {thisRoom.IdNumber}");
                         if (currentLocation > Room.rooms.Count - 1)
                         {
                             Console.WriteLine("Please stop banging your head on the dungeon wall. " +
@@ -53,7 +48,6 @@ namespace ConsoleUI
                         break;
                     case '2':
                         currentLocation = MovePlayer.MoveSouth(ref currentLocation);
-                        //Console.WriteLine($"You are in {thisRoom.Name} {thisRoom.IdNumber}");
                         if (currentLocation <= 0)
                         {
                             Console.WriteLine("You'll stay here until you move in another direction.");
@@ -61,7 +55,6 @@ namespace ConsoleUI
                         break;
                     case '3':
                         currentLocation = MovePlayer.MoveEast(ref currentLocation);
-                        //Console.WriteLine($"You are in {thisRoom.Name} {thisRoom.IdNumber}");
                         if (currentLocation <= 0)
                         {
                             Console.WriteLine("You'll stay here until you move in another direction.");
@@ -69,7 +62,6 @@ namespace ConsoleUI
                         break;
                     case '4':
                         currentLocation = MovePlayer.MoveWest(ref currentLocation);
-                        //Console.WriteLine($"You are in {thisRoom.Name} {thisRoom.IdNumber}");
                         if (currentLocation <= 0)
                         {
                             Console.WriteLine("You'll stay here until you move in another direction.");
