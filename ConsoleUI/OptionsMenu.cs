@@ -18,7 +18,7 @@ namespace ConsoleUI
             {
                 case '1':
                     Room.RoomDisplay(); 
-                    //Console.WriteLine(MakeLists.playerRooms);
+                    //Console.WriteLine(Room.rooms);
                     break;
                 case '2':
                     Console.WriteLine(Weapon.weapons);
@@ -65,8 +65,8 @@ namespace ConsoleUI
         {
             Console.WriteLine("1. Move North");
             Console.WriteLine("2. Move South");
-            Console.WriteLine("3. Move East");
-            Console.WriteLine("4. Move West");
+            Console.WriteLine("3. Move West");
+            Console.WriteLine("4. Move East");
             Console.WriteLine("5. Attack");
             Console.WriteLine("6. Exit");
             Console.WriteLine("7. Menu");
