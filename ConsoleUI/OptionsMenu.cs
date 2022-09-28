@@ -74,3 +74,8 @@ namespace ConsoleUI
 
     }
 }
+/**
+* CSC 253
+* Lourdes Linares and Ciara McLaughlin
+* This program is a maze/rpg text adventure game. 
+*/

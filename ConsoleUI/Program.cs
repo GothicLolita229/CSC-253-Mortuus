@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 using System.IO;
 using MortuusClassLibrary;
 
+/**
+* CSC 253
+* Lourdes Linares and Ciara McLaughlin
+* This program is a maze/rpg text adventure game. 
+*/
+
 namespace ConsoleUI
 {
     class Program
@@ -29,3 +35,8 @@ namespace ConsoleUI
 
     }
 }
+/**
+* CSC 253
+* Lourdes Linares and Ciara McLaughlin
+* This program is a maze/rpg text adventure game. 
+*/
