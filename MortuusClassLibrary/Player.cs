@@ -10,19 +10,48 @@ namespace MortuusClassLibrary
 {
     public class Player: LivingCreature
     {
+        public Player()
+        {
+        }
+
         /*private string _password;
         private int _location = 0;
         private List<Item> _inventory; //TODO Write the code to back these two up
         private List<Item> _quests;*/
 
-        public Player(int id, string name, string race, string lcclass, string description, int hp, int ac, string password, int location, List<Item> inventory, List<Item> quests)
+        public Player(int id, string name, string race, string lcclass, string description, string weapon, int hp, int ac, string password, int location)
             : base(id, name, race, lcclass, description, hp, ac)
         {
-            
+            ID = id;
+            Name = name;
+            Race = race;
+            LcClass = lcclass;
+            Description = description;
+            Weapon = weapon;
+            HP = hp;
+            AC = ac;
             Password = password;
             Location = location;
+            
         }
 
+        public Player(int id, string name, string race, string lcclass, string description, string weapon, int hp, int ac, string password, int location, List<Item> inventory, List<Item> quests)
+            : base(id, name, race, lcclass, description, hp, ac)
+        {
+            ID = id;
+            Name = name;
+            Race = race;
+            LcClass = lcclass;
+            Description = description;
+            Weapon = weapon;
+            HP = hp;
+            AC = ac;
+            Password = password;
+            Location = location;
+            Inventory = inventory;
+            Quests = quests;
+        }
+        public string Weapon { get; set; }
         public string Password { get; set; }
         public int Location { get; set; }
         public List<Item> Inventory {get; set;}

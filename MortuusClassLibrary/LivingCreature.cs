@@ -26,7 +26,7 @@ namespace MortuusClassLibrary
         public string Race { get; set;}
         public string LcClass { get; set; }
         public string Description { get; set; }
-        public static int HP { get; set; }
+        public int HP { get; set; }
         public int AC { get; set; }
     }
 }

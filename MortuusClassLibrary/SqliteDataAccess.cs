@@ -12,7 +12,7 @@ namespace MortuusClassLibrary
 {
     public class SqliteDataAccess
     {
-        public static List<Player> LoadPlayers()
+        /*public static List<Player> LoadPlayers()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
@@ -21,12 +21,33 @@ namespace MortuusClassLibrary
 
                 return output.ToList();
             }
+        }*/
+
+        public static Player LoadPlayer(string Name)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                try
+                {
+                    var parameters = new { Name = Name };
+                    var output = cnn.QuerySingle<Player>("SELECT * FROM PlayerTable WHERE Name = @Name", parameters);
+                    return output;
+                }
+                catch 
+                {
+                    return null;
+                }
+
+                
+            }
         }
+
+
         public static void SavePlayer(Player player)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute("insert into PlayerTable (ID, Name, Race, LcClass, Description, HP, AC, Password, Location) values (@ID, @Name, @Race, @LcClass, @Description, @HP, @AC, @Password, @Location)", player);
+                cnn.Execute("insert into PlayerTable (ID, Name, Race, LcClass, Description, Weapon, HP, AC, Password, Location) values (@ID, @Name, @Race, @LcClass, @Description, @Weapon, @HP, @AC, @Password, @Location)", player);
             }
         }
 

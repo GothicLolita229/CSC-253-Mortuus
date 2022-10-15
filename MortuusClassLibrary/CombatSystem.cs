@@ -8,10 +8,10 @@ namespace MortuusClassLibrary
 {
     public class CombatSystem
     {
-        public int Hp = Player.HP;
+        //public int Hp = Player.HP;
         //public static int newHp = 0;
         //public static int damage = 0;
-        public static int AttackPoints()
+        public static int AttackPoints(int hp)
         {
             Random rand = new Random();
             //char userAction;

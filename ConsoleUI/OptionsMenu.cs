@@ -37,7 +37,7 @@ namespace ConsoleUI
                     Console.WriteLine(Mob.mobs);
                     break;
                 case '7':
-                    GameMenuSwitcher.MainMenu();
+                    Program.Game();
                     break;
                 default:
                     Exit();
@@ -47,13 +47,14 @@ namespace ConsoleUI
 
         public static void WriteExploreMenu()
         {
-            Console.WriteLine("1. View Rooms");
-            Console.WriteLine("2. View Weapons");
-            Console.WriteLine("3. View Potions");
-            Console.WriteLine("4. View Treasures");
-            Console.WriteLine("5. View Items");
-            Console.WriteLine("6. View Mobs");
-            Console.WriteLine("7. Back to Main");
+            Action<string> WL = words => Console.WriteLine(words);
+            WL("1. View Rooms");
+            WL("2. View Weapons");
+            WL("3. View Potions");
+            WL("4. View Treasures");
+            WL("5. View Items");
+            WL("6. View Mobs");
+            WL("7. Back to Main");
         }
 
         public static void Exit()
@@ -63,13 +64,14 @@ namespace ConsoleUI
 
         public static void HelpMenu()
         {
-            Console.WriteLine("1. Move North");
-            Console.WriteLine("2. Move South");
-            Console.WriteLine("3. Move West");
-            Console.WriteLine("4. Move East");
-            Console.WriteLine("5. Attack");
-            Console.WriteLine("6. Exit");
-            Console.WriteLine("7. Menu");
+            Action<string> WL = words => Console.WriteLine(words);
+            WL("1. Move North");
+            WL("2. Move South");
+            WL("3. Move West");
+            WL("4. Move East");
+            WL("5. Attack");
+            WL("6. Exit");
+            WL("7. Menu");
         }
 
     }
