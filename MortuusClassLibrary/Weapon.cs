@@ -8,7 +8,7 @@ namespace MortuusClassLibrary
 {
     public class Weapon : IngameItem
     {
-        public static List<Weapon> weapons = SqliteDataAccess.LoadWeapons();
+        public static List<Weapon> weapons = SqliteDataAccess.LoadWeaponsList();
         public Weapon(): base() { }
         public Weapon(int idNumber, string name, string description, string damageType, int damage, string price)
             : base(idNumber, name, description, price)
