@@ -29,6 +29,8 @@ namespace ConsoleUI
 
             Action<string> WL = words => Console.WriteLine(words);
 
+            WL(player.Password);
+
             string charName = "Ciara"; //LoadPlayer.PlayerInfo();
             int damage; // = CombatSystem.damage;
             int hp = player.HP;

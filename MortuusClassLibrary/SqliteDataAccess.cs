@@ -37,11 +37,8 @@ namespace MortuusClassLibrary
                 {
                     return null;
                 }
-
-                
             }
         }
-
 
         public static void SavePlayer(Player player)
         {

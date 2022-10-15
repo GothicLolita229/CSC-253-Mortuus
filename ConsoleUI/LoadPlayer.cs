@@ -14,16 +14,15 @@ namespace ConsoleUI
         {
             Player player = new Player();
             Action<string> WL = words => Console.WriteLine(words);
-            string username;
             WL("Enter your username: ");
-            username = Console.ReadLine();
-
-            // does file with username.txt exist?
-            string charName = "";
+            string username = Console.ReadLine();
+            player = SqliteDataAccess.LoadPlayer(username);
+            // does player with same username exist?
+            string charName;
             try
             {
-                player = SqliteDataAccess.LoadPlayer(username);
-                if (player == null)
+                
+                if (username != player.Name)
                 {
                     charName = NewPlayer(username);
                 }
@@ -37,75 +36,16 @@ namespace ConsoleUI
                     }
                 }
             }
-            catch
+            catch(Exception ex)
             {
-                try
-                {
-                    if (File.Exists(username + ".txt")) //if (username == Player.Name)
-                    {
-                        charName = ReturnPlayer(username);
-                    }
-                    else
-                    {
-                        charName = NewPlayer(username);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    WL("Error checking file..." + ex.Message);
-                }
-                
+                Console.WriteLine(ex);
             }
             
             return player;
         }
-        /*public static string NewPlayer(string username)
-        {
-            // make file with username as name
-            Action<string> WL = words => Console.WriteLine(words);
-            StreamWriter outputfile;
-            string charName;
-            string playerRace;
-            string playerClass;
-            string playerWeapon;
-            try
-            {
-                outputfile = File.CreateText(username + ".txt");
-                WL($"Welcome, {username}!");
-                WL("Let's create a character for you...");
-                //for some reason have to close file and then open again to append text
-                outputfile.Close();
-                try
-                {
-                    outputfile = File.AppendText(username + ".txt");
-                    WL("What would you like to name your character?");
-                    charName = Console.ReadLine();
-                    WL("Choose and enter your race: ");
-                    playerRace = Console.ReadLine();
-                    WL("Choose and enter your class: ");
-                    playerClass = Console.ReadLine();
-                    WL("Choose and enter your weapon: ");
-                    playerWeapon = Console.ReadLine();
-                    outputfile.WriteLine(charName, playerRace, playerClass, playerWeapon);
-                    outputfile.Close();
-                }
-                catch (Exception ex)
-                {
-                    WL(ex.Message);
-                    throw;
-                }
-            }
-            catch (Exception)
-            {
-                WL("Error making character...");
-                throw;
-            }
-            return charName;
-        }*/
 
         public static string NewPlayer(string username)
         {
-            // make file with username as name
             Action<string> WL = words => Console.WriteLine(words);
             Func<string> RL = Console.ReadLine;
             Player player = new Player();
@@ -116,9 +56,6 @@ namespace ConsoleUI
                 WL("Let's create a character for you...");
                 try
                 {
-                    //int id, string name, string race, string lcclass, string description,
-                    //string weapon, int hp, int ac, string password, int location
-                    //outputfile = File.AppendText(username + ".txt");
                     WL("What would you like to name your character?");
                     player.Name = RL();
                     WL("Choose and enter your race: ");
@@ -133,7 +70,6 @@ namespace ConsoleUI
                     player.AC = 15;
                     player.Location = 301;
                     string password;
-                    
                     bool valid = false;
 
                     while (!valid)
@@ -153,9 +89,7 @@ namespace ConsoleUI
                             player.Password = password;
                         }
                     }
-                    
-
-
+                    SqliteDataAccess.SavePlayer(player);
                 }
                 catch (Exception ex)
                 {
@@ -173,23 +107,12 @@ namespace ConsoleUI
 
         public static string ReturnPlayer(string username)
         {
-            // get input from file with playername.txt
             Action<string> WL = words => Console.WriteLine(words);
-            StreamReader inputfile;
-            string charName;
 
-            inputfile = File.OpenText(username + ".txt");
-            charName = inputfile.ReadLine();
-            List<string> playerFile = ReadFile.FileReader($"{username}.txt");
-
-            foreach (var item in playerFile)
-            {
-                WL(item);
-            }
+            Player player = SqliteDataAccess.LoadPlayer(username);
             WL($"Welcome back, {username}!");
 
-            inputfile.Close();
-            return charName;
+            return player.Name;
         }
     }
 }
