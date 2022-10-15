@@ -44,7 +44,7 @@ namespace MortuusClassLibrary
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute("insert into PlayerTable (ID, Name, Race, LcClass, Description, Weapon, HP, AC, Password, Location) values (@ID, @Name, @Race, @LcClass, @Description, @Weapon, @HP, @AC, @Password, @Location)", player);
+                cnn.Execute("insert into PlayerTable (Name, Race, LcClass, Description, Weapon, HP, AC, Password, Location) values (@Name, @Race, @LcClass, @Description, @Weapon, @HP, @AC, @Password, @Location)", player);
             }
         }
 
@@ -63,7 +63,7 @@ namespace MortuusClassLibrary
             {
                 var parameters = new { ID = ID };
 
-                var output = cnn.QuerySingle<Room>("SELECT * FROM RoomsTable WHERE ID = @ID", parameters);
+                var output = cnn.QuerySingle<Room>("SELECT * FROM RoomsTable WHERE ID = @ID" , parameters);
 
                 return output;
             }

@@ -17,11 +17,7 @@ namespace MortuusClassLibrary
             //char userAction;
 
             int damage = rand.Next(1, 20);
-            /*do
-            {
-                //userAction = Console.ReadLine()[0];
-            }
-            while (userAction != 'a');*/
+
             return damage;
         }
         public static int CalcHealth(ref int Hp, int damage)

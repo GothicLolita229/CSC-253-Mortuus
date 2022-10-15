@@ -21,8 +21,7 @@ namespace ConsoleUI
             string charName;
             try
             {
-                
-                if (username != player.Name)
+                if (player == null)
                 {
                     charName = NewPlayer(username);
                 }
@@ -40,10 +39,8 @@ namespace ConsoleUI
             {
                 Console.WriteLine(ex);
             }
-            
             return player;
         }
-
         public static string NewPlayer(string username)
         {
             Action<string> WL = words => Console.WriteLine(words);
@@ -54,64 +51,54 @@ namespace ConsoleUI
             {
                 WL($"Welcome, {username}!");
                 WL("Let's create a character for you...");
-                try
-                {
-                    WL("What would you like to name your character?");
-                    player.Name = RL();
-                    WL("Choose and enter your race: ");
-                    player.Race = RL();
-                    WL("Choose and enter your class: ");
-                    player.LcClass = RL();
-                    WL("Enter your character's description: ");
-                    player.Description = RL();
-                    WL("Choose and enter your weapon: ");
-                    player.Weapon = RL();
-                    player.HP = 100;
-                    player.AC = 15;
-                    player.Location = 301;
-                    string password;
-                    bool valid = false;
+                WL("What would you like to name your character?");
+                player.Name = RL();
+                WL("Choose and enter your race: ");
+                player.Race = RL();
+                WL("Choose and enter your class: ");
+                player.LcClass = RL();
+                WL("Enter your character's description: ");
+                player.Description = RL();
+                WL("Choose and enter your weapon: ");
+                player.Weapon = RL();
+                player.HP = 100;
+                player.AC = 15;
+                player.Location = 301;
+                string password;
+                bool valid = false;
 
-                    while (!valid)
-                    {
-                        WL("Enter your password (Must contain a capital, lowercase and special character): ");
-                        password = RL();
-                        valid = Player.CheckPassword(ref password);
-                        if (valid == false)
-                        {
-                            Console.WriteLine("Enter your password (Must contain a capital, lowercase and special character): ");
-                            password = RL();
-                        }
-                        else
-                        {
-                            valid = true;
-                            WL("Enjoy the game!");
-                            player.Password = password;
-                        }
-                    }
-                    SqliteDataAccess.SavePlayer(player);
-                }
-                catch (Exception ex)
+                while (!valid)
                 {
-                    WL(ex.Message);
-                    throw;
+                    WL("Enter your password (Must contain a capital, lowercase and special character): ");
+                    password = RL();
+                    valid = Player.CheckPassword(ref password);
+                    if (valid == false)
+                    {
+                        Console.WriteLine("Enter your password (Must contain a capital, lowercase and special character): ");
+                        password = RL();
+                    }
+                    else
+                    {
+                        valid = true;
+                        WL("Enjoy the game!");
+                        player.Password = password;
+                    }
                 }
+                SqliteDataAccess.SavePlayer(player);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 WL("Error making character...");
+                WL(ex.Message);
                 throw;
             }
             return player.Name;
         }
-
         public static string ReturnPlayer(string username)
         {
             Action<string> WL = words => Console.WriteLine(words);
-
             Player player = SqliteDataAccess.LoadPlayer(username);
             WL($"Welcome back, {username}!");
-
             return player.Name;
         }
     }
