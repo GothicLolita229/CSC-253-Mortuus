@@ -16,6 +16,10 @@ namespace ConsoleUI
 {
     class Program
     {
+        delegate int AttackPoints(int hp);
+        delegate int HealthPoints(int hp, int damage);
+        delegate void EnemyDialog();
+      
         static void Main(string[] args)
         {
             Room.RoomDisplay();
@@ -25,13 +29,19 @@ namespace ConsoleUI
 
          public static void Game()
         {
+            AttackPoints Attack = CombatSystem.AttackPoints;
+            HealthPoints HP = CombatSystem.CalcHealth;
+            EnemyDialog DisplayDialog = delegate ()
+            {
+                Console.WriteLine("That serves you right! It'll teach you not to challenge us again. You hear the enemies shout as your vision fades.");
+            };
             Player player = LoadPlayer.PlayerInfo();
 
             Action<string> WL = words => Console.WriteLine(words);
 
-            string charName = "Ciara"; //LoadPlayer.PlayerInfo();
+            string charName = player.Name;
             int damage; // = CombatSystem.damage;
-            int hp = 50;// = player.HP; TEST
+            int hp = player.HP;
             char userChoice;
             int currentLocation = 301;
             WL("MAIN MENU: \n");
@@ -80,13 +90,16 @@ namespace ConsoleUI
                         {
                             WL("You are in a fight!");
                             //WL("Enter action: (a) for attack or any other key to exit.");
-                            damage = CombatSystem.AttackPoints(player.HP);
+                            damage = Attack(player.HP);
+                            //damage = CombatSystem.AttackPoints(player.HP);
                             WL($"You've taken {damage} points of damage");
-                            hp = CombatSystem.CalcHealth(ref hp, damage);
+                            hp = HP(hp, damage);
+                            //hp = CombatSystem.CalcHealth(ref hp, damage);
                             WL($"Your hp is at {hp}\n");
                         }
                         else
                         {
+                            DisplayDialog();
                             WL("You are dead.");
                         }
                         break;

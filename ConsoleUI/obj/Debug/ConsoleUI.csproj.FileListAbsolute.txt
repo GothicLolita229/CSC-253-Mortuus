@@ -170,3 +170,19 @@ D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS10\ConsoleUI\bin\Debug\Mortuu
 D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS10\ConsoleUI\bin\Debug\System.Data.SQLite.xml
 D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS10\ConsoleUI\bin\Debug\Dapper.xml
 D:\ASchool Fall 2022-Spring2023\Fall 2022\MortuusVS10\ConsoleUI\obj\Debug\ConsoleUI.csproj.CopyComplete
+C:\Users\snowt\OneDrive\Desktop\coding\C#\CSC-253-Mortuus\ConsoleUI\bin\Debug\MortuusDb.db
+C:\Users\snowt\OneDrive\Desktop\coding\C#\CSC-253-Mortuus\ConsoleUI\bin\Debug\ConsoleUI.exe.config
+C:\Users\snowt\OneDrive\Desktop\coding\C#\CSC-253-Mortuus\ConsoleUI\bin\Debug\ConsoleUI.exe
+C:\Users\snowt\OneDrive\Desktop\coding\C#\CSC-253-Mortuus\ConsoleUI\bin\Debug\ConsoleUI.pdb
+C:\Users\snowt\OneDrive\Desktop\coding\C#\CSC-253-Mortuus\ConsoleUI\bin\Debug\MortuusClassLibrary.dll
+C:\Users\snowt\OneDrive\Desktop\coding\C#\CSC-253-Mortuus\ConsoleUI\bin\Debug\System.Data.SQLite.dll
+C:\Users\snowt\OneDrive\Desktop\coding\C#\CSC-253-Mortuus\ConsoleUI\bin\Debug\Dapper.dll
+C:\Users\snowt\OneDrive\Desktop\coding\C#\CSC-253-Mortuus\ConsoleUI\bin\Debug\MortuusClassLibrary.pdb
+C:\Users\snowt\OneDrive\Desktop\coding\C#\CSC-253-Mortuus\ConsoleUI\bin\Debug\System.Data.SQLite.xml
+C:\Users\snowt\OneDrive\Desktop\coding\C#\CSC-253-Mortuus\ConsoleUI\bin\Debug\Dapper.xml
+C:\Users\snowt\OneDrive\Desktop\coding\C#\CSC-253-Mortuus\ConsoleUI\obj\Debug\ConsoleUI.csproj.AssemblyReference.cache
+C:\Users\snowt\OneDrive\Desktop\coding\C#\CSC-253-Mortuus\ConsoleUI\obj\Debug\ConsoleUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\snowt\OneDrive\Desktop\coding\C#\CSC-253-Mortuus\ConsoleUI\obj\Debug\ConsoleUI.csproj.CoreCompileInputs.cache
+C:\Users\snowt\OneDrive\Desktop\coding\C#\CSC-253-Mortuus\ConsoleUI\obj\Debug\ConsoleUI.csproj.CopyComplete
+C:\Users\snowt\OneDrive\Desktop\coding\C#\CSC-253-Mortuus\ConsoleUI\obj\Debug\ConsoleUI.exe
+C:\Users\snowt\OneDrive\Desktop\coding\C#\CSC-253-Mortuus\ConsoleUI\obj\Debug\ConsoleUI.pdb

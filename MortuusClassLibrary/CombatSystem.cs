@@ -11,6 +11,8 @@ namespace MortuusClassLibrary
         //public int Hp = Player.HP;
         //public static int newHp = 0;
         //public static int damage = 0;
+
+        delegate int GetHitPoints(int hp);
         public static int AttackPoints(int hp)
         {
             Random rand = new Random();
@@ -20,11 +22,14 @@ namespace MortuusClassLibrary
 
             return damage;
         }
-        public static int CalcHealth(ref int Hp, int damage)
+        public static int CalcHealth(int Hp, int damage)
         {
             Hp -= damage;
             return Hp;
         }
+
+        GetHitPoints Damage = AttackPoints;
+        
     }
 }
 /**
