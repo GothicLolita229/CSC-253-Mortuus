@@ -19,15 +19,12 @@ namespace ConsoleUI
         delegate int AttackPoints(int hp);
         delegate int HealthPoints(int hp, int damage);
         delegate void EnemyDialog();
-      
+        
         static void Main(string[] args)
         {
-            Room.RoomDisplay();
-            
             Game();
         }
-
-         public static void Game()
+        public static void Game()
         {
             AttackPoints Attack = CombatSystem.AttackPoints;
             HealthPoints HP = CombatSystem.CalcHealth;
@@ -40,7 +37,7 @@ namespace ConsoleUI
             Action<string> WL = words => Console.WriteLine(words);
 
             string charName = player.Name;
-            int damage; // = CombatSystem.damage;
+            int damage;
             int hp = player.HP;
             char userChoice;
             int currentLocation = 301;
@@ -60,7 +57,6 @@ namespace ConsoleUI
                 if (thisRoom.EastExit != -1) { WL(" E "); }
                 WL("");
                 userChoice = Console.ReadLine()[0];
-                //userChoice = Console.ReadLine()[0];
 
                 switch (userChoice)
                 {
@@ -121,7 +117,6 @@ namespace ConsoleUI
             WL("Press enter to exit...");
             // Program ends
             Console.ReadLine();
-        
         }
     }
 }

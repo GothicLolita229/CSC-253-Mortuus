@@ -10,31 +10,30 @@ namespace ConsoleUI
 {
     class OptionsMenu
     {
-        
+        //delegate List<Room> Lists(); TEST
         public static void ExploreMenu(char userChoice)
         {
-
+            ///Lists Display = Room.RoomDisplay; TEST
             switch (userChoice)
             {
                 case '1':
-                    Room.RoomDisplay(); 
-                    //Console.WriteLine(Room.rooms);
+                    Room.RoomDisplay();
+                    //Display; TEST
                     break;
                 case '2':
-                    Console.WriteLine(Weapon.weapons);
+                    Weapon.WeaponDisplay();
                     break;
                 case '3':
-                    Console.WriteLine(Potion.potions);
+                    Potion.PotionDisplay();
                     break;
                 case '4':
-                    Console.WriteLine(Treasure.treasures);
+                    Treasure.TreasureDisplay();
                     break;
                 case '5':
                     Item.ItemDisplay();
-                    Console.WriteLine(Item.items);
                     break;
                 case '6':
-                    Console.WriteLine(Mob.mobs);
+                    Mob.MobDisplay();
                     break;
                 case '7':
                     Program.Game();
@@ -44,7 +43,6 @@ namespace ConsoleUI
                     break;
             }
         }
-
         public static void WriteExploreMenu()
         {
             Action<string> WL = words => Console.WriteLine(words);
@@ -56,12 +54,10 @@ namespace ConsoleUI
             WL("6. View Mobs");
             WL("7. Back to Main");
         }
-
         public static void Exit()
         {
             Environment.Exit(0);
         }
-
         public static void HelpMenu()
         {
             Action<string> WL = words => Console.WriteLine(words);
@@ -73,7 +69,6 @@ namespace ConsoleUI
             WL("6. Exit");
             WL("7. Menu");
         }
-
     }
 }
 /**
