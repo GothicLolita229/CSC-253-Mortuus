@@ -8,7 +8,7 @@ namespace MortuusClassLibrary
 {
     public class Treasure : IngameItem
     {
-        public static List<Treasure> treasures = SqliteDataAccess.LoadTreasuresList();
+        public static List<Treasure> treasures = SqliteDataAccess.LoadTreasures();
         public Treasure() :base() { }
         public Treasure(int idNumber, string name, string description, string questItem, string price)
             : base(idNumber, name, description, price)

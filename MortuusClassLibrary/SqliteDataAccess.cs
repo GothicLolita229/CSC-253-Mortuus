@@ -77,7 +77,7 @@ namespace MortuusClassLibrary
                 return output.ToList();
             }
         }
-        public static List<Weapon> LoadWeaponsList()
+        public static List<Weapon> LoadWeapons()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
@@ -86,7 +86,7 @@ namespace MortuusClassLibrary
             }
         }
 
-        public static List<Item> LoadItemsList()
+        public static List<Item> LoadItems()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
@@ -95,7 +95,7 @@ namespace MortuusClassLibrary
             }
         }
 
-        public static List<Potion> LoadPotionsList()
+        public static List<Potion> LoadPotions()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
@@ -104,7 +104,7 @@ namespace MortuusClassLibrary
             }
         }
 
-        public static List<Treasure> LoadTreasuresList()
+        public static List<Treasure> LoadTreasures()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {

@@ -8,7 +8,7 @@ namespace MortuusClassLibrary
 {
     public class Potion : IngameItem
     {
-        public static List<Potion> potions = SqliteDataAccess.LoadPotionsList();
+        public static List<Potion> potions = SqliteDataAccess.LoadPotions();
 
         //private int _valueChange;
         //private int _healthPotion = 20;
