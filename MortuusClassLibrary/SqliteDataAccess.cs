@@ -90,7 +90,7 @@ namespace MortuusClassLibrary
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<Item>("SELECT Name FROM ItemsTable", new DynamicParameters());
+                var output = cnn.Query<Item>("SELECT Name FROM QuestItemsTable", new DynamicParameters());
                 return output.ToList();
             }
         }
