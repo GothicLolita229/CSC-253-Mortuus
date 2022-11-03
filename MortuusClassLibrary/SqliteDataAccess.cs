@@ -77,6 +77,17 @@ namespace MortuusClassLibrary
                 return output.ToList();
             }
         }
+        public static Room LoadRoomInv(int RoomID)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var parameters = new { RoomID = RoomID };
+
+                var output = cnn.QuerySingle<Room>("SELECT * FROM RoomInventory WHERE RoomID = @RoomID", parameters);
+
+                return output;
+            }
+        }
         public static List<Weapon> LoadWeaponsList()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))

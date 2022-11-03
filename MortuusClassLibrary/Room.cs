@@ -29,6 +29,19 @@ namespace MortuusClassLibrary
             WestExit = westExit;
             EastExit = eastExit;
         }
+
+        public Room(int id, string name, string description, int northExit, int southExit, int westExit, int eastExit, 
+            List<int> roomInv)
+        {
+            ID = id;
+            Name = name;
+            Description = description;
+            NorthExit = northExit;
+            SouthExit = southExit;
+            WestExit = westExit;
+            EastExit = eastExit;
+            RoomInv = roomInv;
+        }
         public string Name { get; set; }
         public int ID { get; set; }
         public string Description { get; set; }
@@ -36,6 +49,7 @@ namespace MortuusClassLibrary
         public int SouthExit { get; set; }
         public int WestExit { get; set; }
         public int EastExit { get; set; }
+        public List<int> RoomInv { get; set; }
         public static void AddItem(Item newItem, List<Item> playerInventory)
         {
             playerInventory.Add(newItem);
