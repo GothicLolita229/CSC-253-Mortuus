@@ -31,6 +31,15 @@ namespace MortuusClassLibrary
             }
             return mobs;
         }
+
+        public static Mob MobSpawner()
+        {
+            Random rand = new Random();
+            int mobIndex = rand.Next(0, 10);
+            Mob mob = mobs[mobIndex];
+
+            return mob;
+        }
     }
 }
 /**

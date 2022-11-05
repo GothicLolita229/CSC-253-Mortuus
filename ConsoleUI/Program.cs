@@ -27,6 +27,7 @@ namespace ConsoleUI
         public static void Game()
         {
             AttackPoints Attack = CombatSystem.AttackPoints;
+            AttackPoints Attack2 = CombatSystem.AttackPoints;
             HealthPoints HP = CombatSystem.CalcHealth;
             EnemyDialog DisplayDialog = delegate ()
             {
@@ -38,6 +39,8 @@ namespace ConsoleUI
 
             string charName = player.Name;
             int damage;
+            int mobHp;
+            bool hasEscaped = false;
             int hp = player.HP;
             char userChoice;
             int currentLocation = 301;
@@ -47,8 +50,11 @@ namespace ConsoleUI
             do
             {
                 Room thisRoom = SqliteDataAccess.LoadRoom(currentLocation);
+                Mob thisMob = Mob.MobSpawner();
+                mobHp = thisMob.HP;
                 WL("\n");
                 WL($"You are in {thisRoom.Name} ( {thisRoom.ID} )");
+                WL("There is a " + thisMob.Name + " in the room with you!");
                 WL(thisRoom.Description);
                 WL("Your exit(s) are ");
                 if (thisRoom.NorthExit != -1) { WL(" N "); }
@@ -82,20 +88,53 @@ namespace ConsoleUI
                         break;
                     case '5':
                         // TODO Move entire to combat Class method and then just call method here
-                        if (hp >= 1)
+                        while (mobHp >= 1 && hasEscaped != true && hp >= 1)
                         {
-                            WL("You are in a fight!");
-                            //WL("Enter action: (a) for attack or any other key to exit.");
-                            damage = Attack(player.HP);
-                            //damage = CombatSystem.AttackPoints(player.HP);
-                            WL($"You've taken {damage} points of damage");
-                            hp = HP(hp, damage);
-                            //hp = CombatSystem.CalcHealth(ref hp, damage);
-                            WL($"Your hp is at {hp}\n");
+                            if (hp >= 1)
+                            {
+                                WL("You are in a fight with " + thisMob.Name + " who currently has " + mobHp + "!");
+                                WL("1. Attack");
+                                WL("2. Run away");
+                                char combatChoice = Console.ReadLine()[0];
+                                if (combatChoice == '1')
+                                {
+                                    int damage2 = Attack2(thisMob.HP);
+                                    WL("You've hit the " + thisMob.Name + " for " + damage2 + "!");
+                                    mobHp = HP(mobHp, damage2);
+                                    damage = Attack(player.HP);
+                                    WL($"You've taken {damage} points of damage");
+                                    hp = HP(hp, damage);
+                                    WL($"Your hp is at {hp}\n");
+                                }
+                                else if (combatChoice == '2')
+                                {
+                                    hasEscaped = CombatSystem.Escape(hasEscaped);
+                                    if (hasEscaped == true)
+                                    {
+                                        WL("You've escaped successfully!");
+
+                                    }
+                                    else
+                                    {
+                                        WL("You've failed to escape!");
+                                        damage = Attack(player.HP);
+                                        WL($"You've taken {damage} points of damage");
+                                        hp = HP(hp, damage);
+                                        WL($"Your hp is at {hp}\n");
+                                    }
+                                }
+                                else
+                                {
+                                    WL("Not a valid choice!");
+                                }
+                            }
                         }
-                        else
+                        if (mobHp < 1)
                         {
-                            DisplayDialog();
+                            WL("You've killed the enemy!");
+                        }
+                        else if (hp < 1)
+                        {
                             WL("You are dead.");
                         }
                         break;

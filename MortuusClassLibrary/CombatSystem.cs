@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace MortuusClassLibrary
@@ -27,6 +28,22 @@ namespace MortuusClassLibrary
             Hp -= damage;
             return Hp;
         }
+
+        public static bool Escape(bool hasEscaped)
+        {
+            Random rand = new Random();
+            int roll = rand.Next(0, 21);
+            if (roll > 10)
+            {
+                hasEscaped = true;
+            }
+            else
+            {
+                hasEscaped = false;
+            }
+            return hasEscaped;
+        }
+
 
         GetHitPoints Damage = AttackPoints;
         
