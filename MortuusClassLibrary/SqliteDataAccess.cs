@@ -56,7 +56,17 @@ namespace MortuusClassLibrary
                 return output.ToList();
             }
         }
+        public static Mob LoadMob(object ID) //Changed to object to make a list of generic objects
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var parameters = new { ID = ID };
 
+                var output = cnn.QuerySingle<Mob>("SELECT * FROM MobsTable WHERE ID = @ID", parameters);
+
+                return output;
+            }
+        }
         public static Room LoadRoom(int ID)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -77,13 +87,24 @@ namespace MortuusClassLibrary
                 return output.ToList();
             }
         }
-        public static Room LoadRoomInv(int RoomID)
+        /* public static Room LoadRoomInv(int RoomID) //VERSION 1
+         {
+             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+             {
+                 var parameters = new { RoomID = RoomID };
+
+                 var output = cnn.QuerySingle<Room>("SELECT * FROM RoomInventory WHERE RoomID = @RoomID", parameters);
+
+                 return output;
+             }
+         }*/
+        public static List<object> LoadRoomInv(int RoomID) // VERSION 2 //Changed to object to make a list of generic objects
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
                 var parameters = new { RoomID = RoomID };
 
-                var output = cnn.QuerySingle<Room>("SELECT * FROM RoomInventory WHERE RoomID = @RoomID", parameters);
+                var output = cnn.QuerySingle<List<object>>("SELECT * FROM RoomInventory WHERE RoomID = @RoomID", parameters);
 
                 return output;
             }
@@ -96,7 +117,17 @@ namespace MortuusClassLibrary
                 return output.ToList();
             }
         }
+        public static Weapon LoadWeapon(object ID) //Changed to object to make a list of generic objects
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var parameters = new { ID = ID };
 
+                var output = cnn.QuerySingle<Weapon>("SELECT * FROM WeaponsTable WHERE ID = @ID", parameters);
+
+                return output;
+            }
+        }
         public static List<Item> LoadItemsList()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -105,7 +136,17 @@ namespace MortuusClassLibrary
                 return output.ToList();
             }
         }
+        public static Item LoadItem(object ID) //Changed to object to make a list of generic objects 
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var parameters = new { ID = ID };
 
+                var output = cnn.QuerySingle<Item>("SELECT * FROM QuestItemsTable WHERE ID = @ID", parameters);
+
+                return output;
+            }
+        }
         public static List<Potion> LoadPotionsList()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -114,7 +155,17 @@ namespace MortuusClassLibrary
                 return output.ToList();
             }
         }
+        public static Potion LoadPotion(object ID) //Changed to object to make a list of generic objects
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var parameters = new { ID = ID };
 
+                var output = cnn.QuerySingle<Potion>("SELECT * FROM PotionsTable WHERE ID = @ID", parameters);
+
+                return output;
+            }
+        }
         public static List<Treasure> LoadTreasuresList()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -123,8 +174,17 @@ namespace MortuusClassLibrary
                 return output.ToList();
             }
         }
+        public static Treasure LoadTreasure(object ID) //Changed to object to make a list of generic objects
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var parameters = new { ID = ID };
 
+                var output = cnn.QuerySingle<Treasure>("SELECT * FROM TreasuresTable WHERE ID = @ID", parameters);
 
+                return output;
+            }
+        }
         private static string LoadConnectionString(string id = "Default")
         {
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;
