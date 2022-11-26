@@ -38,14 +38,19 @@ namespace WpfMUI
 
         private Room thisRoom; // = SqliteDataAccess.LoadRoom(currentLocation);
         private Mob thisMob = Mob.MobSpawner();
-        private Player player = LoadPlayer.PlayerInfo();
+        private Player player;
 
         //static Label GamePlaceLabel = new Label();
-        
+
 
         public void ChangeLabel(string words)
         {
             GamePlaceLabel.Content = words;
+        }
+
+        public void Message(string words)
+        {
+            InfoDisplay.Text = words;
         }
 
         delegate int AttackPoints(int hp);
@@ -58,13 +63,13 @@ namespace WpfMUI
             HealthPoints HP = CombatSystem.CalcHealth;
             EnemyDialog DisplayDialog = delegate ()
             {
-                Console.WriteLine("That serves you right! It'll teach you not to challenge us again. You hear the enemies shout as your vision fades.");
+                Message("That serves you right! It'll teach you not to challenge us again. You hear the enemies shout as your vision fades.");
             };
-             // MAKE THIS WORK CIARA
-            
-            
+            // MAKE THIS WORK CIARA
+            player = LoadPlayer.PlayerInfo(this);
+
             //Action<string> ChangeLabel = words => Console.WriteLine(words);
-            
+
 
             /*string charName = player.Name;
             int damage;
@@ -227,21 +232,53 @@ namespace WpfMUI
                 return roomInv;
             }
 
-        private void NorthB_Click(object sender, RoutedEventArgs e)
+        private void HandleMovement()
         {
+            thisRoom = SqliteDataAccess.LoadRoom(currentLocation);
+            thisMob = Mob.MobSpawner();
+            mobHp = thisMob.HP;
+            string exits = "";
+            string description = "";
+            if (thisRoom.NorthExit != -1) { exits += " N "; }
+            if (thisRoom.SouthExit != -1) { exits += " S "; }
+            if (thisRoom.WestExit != -1) { exits += " W "; }
+            if (thisRoom.EastExit != -1) { exits += " E "; }
+            description += $"You are in {thisRoom.Name} ( {thisRoom.ID} ) \n There is a " + thisMob.Name + " in the room with you!" + "\n" +
+                $"{thisRoom.Description} \n Your exit(s) are : {exits} \n";
+                
+                
             if (thisRoom.NorthExit != -1)
             { currentLocation = thisRoom.NorthExit; }
-            else { ChangeLabel("There is nothing for you here."); }
+            else { description += "There is nothing for you here."; }
+
+            if (thisRoom.SouthExit != -1)
+            { currentLocation = thisRoom.SouthExit; }
+            else { description += "Why would you walk into a wall?"; }
+
+            if (thisRoom.WestExit != -1)
+            { currentLocation = thisRoom.WestExit; }
+            else { description += "The definition of insanity is doing the same thing over and over... I'm sure you've heard this before"; }
+
+            if (thisRoom.EastExit != -1)
+            { currentLocation = thisRoom.EastExit; }
+            else { description += "Sorry, you can't walk through walls.... yet"; }
+
+            Message(description);
+        }
+
+        private void NorthB_Click(object sender, RoutedEventArgs e)
+        {
+            HandleMovement();
         }
 
         private void SouthB_Click(object sender, RoutedEventArgs e)
         {
-
+            HandleMovement();
         }
 
         private void EastB_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void WestB_Click(object sender, RoutedEventArgs e)

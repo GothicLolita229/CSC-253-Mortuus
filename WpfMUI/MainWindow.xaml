@@ -15,5 +15,6 @@
         <Button Content="Attack" HorizontalAlignment="Left" Margin="538,390,0,0" VerticalAlignment="Top" Width="44" Click="AttackB_Click"/>
         <Button Content="Menu" HorizontalAlignment="Left" Margin="10,364,0,0" VerticalAlignment="Top" Width="37" Click="MenuB_Click"/>
         <Button Content="Exit" HorizontalAlignment="Left" Margin="10,390,0,0" VerticalAlignment="Top" Width="25" Click="ExitB_Click"/>
+        <TextBlock x:Name="InfoDisplay" FontSize="10" HorizontalAlignment="Left" Margin="256,66,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="119" Width="121"/>
     </Grid>
 </Window>

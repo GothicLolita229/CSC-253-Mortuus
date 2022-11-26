@@ -23,7 +23,7 @@ namespace ConsoleUI
         static void Main(string[] args)
         {
             Game();
-        } // adding comment
+        } 
         public static void Game()
         {
             AttackPoints Attack = CombatSystem.AttackPoints;

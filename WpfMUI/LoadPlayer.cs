@@ -5,15 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace WpfMUI
 {
-    class LoadPlayer
+    public class LoadPlayer
     {
-        public static Player PlayerInfo()
+        
+        public static Player PlayerInfo(MainWindow window)
         {
+            
             Player player = new Player();
-            //Action<string> WL = words => Console.WriteLine(words);
-            //WL("Enter your username: ");
+            //Action<string> ChangeLabel = words => Console.WriteLine(words);
+            //ChangeLabel("Enter your username: ");
             string username = "Vecna"; //Console.ReadLine();
             player = SqliteDataAccess.LoadPlayer(username);
             // does player with same username exist?
@@ -22,15 +25,15 @@ namespace WpfMUI
             {
                 if (player == null)
                 {
-                    charName = NewPlayer(username);
+                    charName = NewPlayer(username, window);
                 }
                 else
                 {
-                    //WL("Enter your password: ");
+                    //ChangeLabel("Enter your password: ");
                     string password = "NoShoes!";//Console.ReadLine();
                     if (password == player.Password)
                     {
-                        charName = ReturnPlayer(username);
+                        charName = ReturnPlayer(username, window);
                     }
                 }
             }
@@ -40,25 +43,25 @@ namespace WpfMUI
             }
             return player;
         }
-        public static string NewPlayer(string username)
+        public static string NewPlayer(string username, MainWindow window)
         {
-            Action<string> WL = words => Console.WriteLine(words);
+            //Action<string> ChangeLabel = words => Console.WriteLine(words);
             Func<string> RL = Console.ReadLine;
             Player player = new Player();
 
             try
             {
-                WL($"Welcome, {username}!");
-                WL("Let's create a character for you...");
-                WL("What would you like to name your character?");
+                window.ChangeLabel($"Welcome, {username}!");
+                window.ChangeLabel("Let's create a character for you...");
+                window.ChangeLabel("What would you like to name your character?");
                 player.Name = RL();
-                WL("Choose and enter your race: ");
+                window.ChangeLabel("Choose and enter your race: ");
                 player.Race = RL();
-                WL("Choose and enter your class: ");
+                window.ChangeLabel("Choose and enter your class: ");
                 player.LcClass = RL();
-                WL("Enter your character's description: ");
+                window.ChangeLabel("Enter your character's description: ");
                 player.Description = RL();
-                WL("Choose and enter your weapon: ");
+                window.ChangeLabel("Choose and enter your weapon: ");
                 player.Weapon = RL();
                 player.HP = 100;
                 player.AC = 15;
@@ -68,7 +71,7 @@ namespace WpfMUI
 
                 while (!valid)
                 {
-                    WL("Enter your password (Must contain a capital, lowercase and special character): ");
+                    window.ChangeLabel("Enter your password (Must contain a capital, lowercase and special character): ");
                     password = RL();
                     valid = Player.CheckPassword(ref password);
                     if (valid == false)
@@ -79,7 +82,7 @@ namespace WpfMUI
                     else
                     {
                         valid = true;
-                        WL("Enjoy the game!");
+                        window.ChangeLabel("Enjoy the game!");
                         player.Password = password;
                     }
                 }
@@ -87,17 +90,17 @@ namespace WpfMUI
             }
             catch (Exception ex)
             {
-                WL("Error making character...");
-                WL(ex.Message);
+                window.ChangeLabel("Error making character...");
+                window.ChangeLabel(ex.Message);
                 throw;
             }
             return player.Name;
         }
-        public static string ReturnPlayer(string username)
+        public static string ReturnPlayer(string username, MainWindow window)
         {
-            //Action<string> WL = words => Console.WriteLine(words);
+            //Action<string> ChangeLabel = words => Console.WriteLine(words);
             Player player = SqliteDataAccess.LoadPlayer(username);
-            //WL($"Welcome back, {username}!");
+            window.ChangeLabel($"Welcome back, {username}!");
             return player.Name;
         }
     }
