@@ -277,13 +277,13 @@ namespace WpfMUI
         }
 
         private void EastB_Click(object sender, RoutedEventArgs e)
-        {
-            
+        { 
+            HandleMovement(); 
         }
 
         private void WestB_Click(object sender, RoutedEventArgs e)
         {
-
+            HandleMovement();
         }
 
         private void AttackB_Click(object sender, RoutedEventArgs e)
