@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfMUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMUI"
+        mc:Ignorable="d"
+        Title="Mortuus" Height="450" Width="602.419">
+    <Grid Margin="0,0,3.333,-0.333">
+        <Label x:Name="GamePlaceLabel" Content="Welcome to Mortuus&#xD;&#xA;" HorizontalAlignment="Center" Margin="40,19,0,0" VerticalAlignment="Top" Width="Auto"/>
+        <Button Content="N" HorizontalAlignment="Left" Margin="34,46,0,0" VerticalAlignment="Top" Width="20" Click="NorthB_Click"/>
+        <Button Content="S" HorizontalAlignment="Left" Margin="34,104,0,0" VerticalAlignment="Top" Width="20" Click="SouthB_Click"/>
+        <Button Content="W" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Width="20" Click="WestB_Click"/>
+        <Button Content="E" HorizontalAlignment="Left" Margin="57,75,0,0" VerticalAlignment="Top" Width="20" Click="EastB_Click"/>
+        <Button Content="Attack" HorizontalAlignment="Left" Margin="538,390,0,0" VerticalAlignment="Top" Width="44" Click="AttackB_Click"/>
+        <Button Content="Menu" HorizontalAlignment="Left" Margin="10,364,0,0" VerticalAlignment="Top" Width="37" Click="MenuB_Click"/>
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="10,390,0,0" VerticalAlignment="Top" Width="25" Click="ExitB_Click"/>
+    </Grid>
+</Window>

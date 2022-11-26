@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MortuusClassLibrary", "MortuusClassLibrary\MortuusClassLibrary.csproj", "{4F5AD540-5EFC-4DA1-A6CD-255BB012E281}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfMUI", "WpfMUI\WpfMUI.csproj", "{D77309D5-95A9-41AC-B56D-4DCFEE6C2C95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4F5AD540-5EFC-4DA1-A6CD-255BB012E281}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F5AD540-5EFC-4DA1-A6CD-255BB012E281}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F5AD540-5EFC-4DA1-A6CD-255BB012E281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D77309D5-95A9-41AC-B56D-4DCFEE6C2C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D77309D5-95A9-41AC-B56D-4DCFEE6C2C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D77309D5-95A9-41AC-B56D-4DCFEE6C2C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D77309D5-95A9-41AC-B56D-4DCFEE6C2C95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

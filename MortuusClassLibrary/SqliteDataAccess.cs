@@ -22,7 +22,7 @@ namespace MortuusClassLibrary
                 return output.ToList();
             }
         }*/
-
+        
         public static Player LoadPlayer(string Name)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -47,7 +47,6 @@ namespace MortuusClassLibrary
                 cnn.Execute("insert into PlayerTable (Name, Race, LcClass, Description, Weapon, HP, AC, Password, Location) values (@Name, @Race, @LcClass, @Description, @Weapon, @HP, @AC, @Password, @Location)", player);
             }
         }
-
         public static List<Mob> LoadMobs()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
