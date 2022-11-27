@@ -1,0 +1,8 @@
+D:\classes\CSC-253\ProjectUnitTests\bin\Debug\ProjectUnitTests.exe.config
+D:\classes\CSC-253\ProjectUnitTests\bin\Debug\ProjectUnitTests.exe
+D:\classes\CSC-253\ProjectUnitTests\bin\Debug\ProjectUnitTests.pdb
+D:\classes\CSC-253\ProjectUnitTests\obj\Debug\ProjectUnitTests.csproj.AssemblyReference.cache
+D:\classes\CSC-253\ProjectUnitTests\obj\Debug\ProjectUnitTests.csproj.SuggestedBindingRedirects.cache
+D:\classes\CSC-253\ProjectUnitTests\obj\Debug\ProjectUnitTests.csproj.CoreCompileInputs.cache
+D:\classes\CSC-253\ProjectUnitTests\obj\Debug\ProjectUnitTests.exe
+D:\classes\CSC-253\ProjectUnitTests\obj\Debug\ProjectUnitTests.pdb
