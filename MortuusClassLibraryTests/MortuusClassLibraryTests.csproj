@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B30A4B6A-C2F1-4E21-8250-CD9B3F81B7C6}</ProjectGuid>
+    <ProjectGuid>{BB9FA4A6-4793-4F86-838B-886E072225D7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MortuusClassLibraryTests</RootNamespace>
-    <AssemblyName>MortuusClassLibraryTests</AssemblyName>
+    <RootNamespace>MortuusClassLibraryTests2</RootNamespace>
+    <AssemblyName>MortuusClassLibraryTests2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -52,7 +52,11 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="LoadTreasure.cs" />
+    <Compile Include="LoadRoom.cs" />
+    <Compile Include="LoadWeapon.cs" />
+    <Compile Include="LoadPotion.cs" />
+    <Compile Include="LoadMob.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MortuusClassLibrary\MortuusClassLibrary.csproj">

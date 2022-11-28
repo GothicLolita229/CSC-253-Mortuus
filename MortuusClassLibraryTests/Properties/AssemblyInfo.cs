@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MortuusClassLibraryTests")]
+[assembly: AssemblyTitle("MortuusClassLibraryTests2")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MortuusClassLibraryTests")]
+[assembly: AssemblyProduct("MortuusClassLibraryTests2")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b30a4b6a-c2f1-4e21-8250-cd9b3f81b7c6")]
+[assembly: Guid("bb9fa4a6-4793-4f86-838b-886e072225d7")]
 
 // Version information for an assembly consists of the following four values:
 //
