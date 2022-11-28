@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WpfMUI;
 
 namespace WinUI
 {
@@ -24,7 +25,8 @@ namespace WinUI
 
         private void login_button_Click(object sender, EventArgs e)
         {
-
+            MainWindow main = new MainWindow();
+            main.ShowDialog();
         }
     }
 }

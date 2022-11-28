@@ -35,6 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.117.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
@@ -49,6 +51,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoadPlayerWN.cs" />
@@ -93,6 +96,10 @@
     <ProjectReference Include="..\MortuusClassLibrary\MortuusClassLibrary.csproj">
       <Project>{4f5ad540-5efc-4da1-a6cd-255bb012e281}</Project>
       <Name>MortuusClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WpfMUI\WpfMUI.csproj">
+      <Project>{d77309d5-95a9-41ac-b56d-4dcfee6c2c95}</Project>
+      <Name>WpfMUI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
