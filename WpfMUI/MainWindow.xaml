@@ -15,6 +15,6 @@
         <Button Content="Attack" Background="DarkRed" HorizontalAlignment="Left" Margin="538,390,0,0" VerticalAlignment="Top" Width="44" Click="AttackB_Click"/>
         <Button Content="Menu" Background="SaddleBrown" HorizontalAlignment="Left" Margin="10,364,0,0" VerticalAlignment="Top" Width="37" Click="MenuB_Click"/>
         <Button Content="Exit" Background="SaddleBrown" HorizontalAlignment="Left" Margin="10,390,0,0" VerticalAlignment="Top" Width="25" Click="ExitB_Click"/>
-        <TextBlock x:Name="InfoDisplay" Background="Bisque" FontSize="10" HorizontalAlignment="Left" Margin="256,66,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="119" Width="121"/>
+        <TextBlock x:Name="InfoDisplay" Background="Bisque" FontSize="10" HorizontalAlignment="Left" Margin="256,66,0,0" TextWrapping="Wrap" Text="Game Information" VerticalAlignment="Top" Height="Auto" Width="175"/>
     </Grid>
 </Window>

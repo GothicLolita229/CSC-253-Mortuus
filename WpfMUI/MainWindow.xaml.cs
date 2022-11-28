@@ -40,9 +40,6 @@ namespace WpfMUI
         private Mob thisMob = Mob.MobSpawner();
         private Player player;
 
-        //static Label GamePlaceLabel = new Label();
-
-
         public void ChangeLabel(string words)
         {
             GamePlaceLabel.Content = words;
@@ -68,132 +65,10 @@ namespace WpfMUI
             // MAKE THIS WORK CIARA
             player = LoadPlayer.PlayerInfo(this);
 
-            //Action<string> ChangeLabel = words => Console.WriteLine(words);
-
-
-            /*string charName = player.Name;
-            int damage;
-            int mobHp;
-            bool hasEscaped = false;
-            int hp = player.HP;
-            char userChoice;
-            int currentLocation = 301;*/
             thisRoom = SqliteDataAccess.LoadRoom(currentLocation);
             charName = player.Name;
             hp = player.HP;
-            /*ChangeLabel("MAIN MENU: \n");
             
-            OptionsMenu.HelpMenu();
-            ChangeLabel($"{charName}, enter numeric value from menu to select an option: ");
-            do
-            {
-                *//*Room thisRoom = SqliteDataAccess.LoadRoom(currentLocation);
-                Mob thisMob = Mob.MobSpawner();*//*
-                mobHp = thisMob.HP;
-                ChangeLabel("\n");
-                ChangeLabel($"You are in {thisRoom.Name} ( {thisRoom.ID} )");
-                ChangeLabel("There is a " + thisMob.Name + " in the room with you!");
-                ChangeLabel(thisRoom.Description);
-                ChangeLabel("Your exit(s) are ");
-                if (thisRoom.NorthExit != -1) { ChangeLabel(" N "); }
-                if (thisRoom.SouthExit != -1) { ChangeLabel(" S "); }
-                if (thisRoom.WestExit != -1) { ChangeLabel(" W "); }
-                if (thisRoom.EastExit != -1) { ChangeLabel(" E "); }
-                ChangeLabel("");
-                userChoice //= Console.ReadLine()[0]; //Change this
-
-                switch (userChoice)
-                {
-                    case '1':
-                        if (thisRoom.NorthExit != -1)
-                        { currentLocation = thisRoom.NorthExit; }
-                        else { ChangeLabel("There is nothing for you here."); }
-                        break;
-                    case '2':
-                        if (thisRoom.SouthExit != -1)
-                        { currentLocation = thisRoom.SouthExit; }
-                        else { ChangeLabel("Why would you walk into a wall?"); }
-                        break;
-                    case '3':
-                        if (thisRoom.WestExit != -1)
-                        { currentLocation = thisRoom.WestExit; }
-                        else { ChangeLabel("The definition of insanity is doing the same thing over and over... I'm sure you've heard this before"); }
-                        break;
-                    case '4':
-                        if (thisRoom.EastExit != -1)
-                        { currentLocation = thisRoom.EastExit; }
-                        else { ChangeLabel("Sorry, you can't walk through walls.... yet"); }
-                        break;
-                    case '5':
-                        // TODO Move entire to combat Class method and then just call method here
-                        while (mobHp >= 1 && hasEscaped != true && hp >= 1)
-                        {
-                            if (hp >= 1)
-                            {
-                                ChangeLabel("You are in a fight with " + thisMob.Name + " who currently has " + mobHp + "!");
-                                ChangeLabel("1. Attack");
-                                ChangeLabel("2. Run away");
-                                char combatChoice = Console.ReadLine()[0];
-                                if (combatChoice == '1')
-                                {
-                                    int damage2 = Attack2(thisMob.HP);
-                                    ChangeLabel("You've hit the " + thisMob.Name + " for " + damage2 + "!");
-                                    mobHp = HP(mobHp, damage2);
-                                    damage = Attack(player.HP);
-                                    ChangeLabel($"You've taken {damage} points of damage");
-                                    hp = HP(hp, damage);
-                                    ChangeLabel($"Your hp is at {hp}\n");
-                                }
-                                else if (combatChoice == '2')
-                                {
-                                    hasEscaped = CombatSystem.Escape(hasEscaped);
-                                    if (hasEscaped == true)
-                                    {
-                                        ChangeLabel("You've escaped successfully!");
-
-                                    }
-                                    else
-                                    {
-                                        ChangeLabel("You've failed to escape!");
-                                        damage = Attack(player.HP);
-                                        ChangeLabel($"You've taken {damage} points of damage");
-                                        hp = HP(hp, damage);
-                                        ChangeLabel($"Your hp is at {hp}\n");
-                                    }
-                                }
-                                else
-                                {
-                                    ChangeLabel("Not a valid choice!");
-                                }
-                            }
-                        }
-                        if (mobHp < 1)
-                        {
-                            ChangeLabel("You've killed the enemy!");
-                        }
-                        else if (hp < 1)
-                        {
-                            ChangeLabel("You are dead.");
-                        }
-                        break;
-                    case '6':
-                        OptionsMenu.Exit();
-                        break;
-                    case '7':
-                        OptionsMenu.WriteExploreMenu();
-                        //ChangeLabel("Menu");
-                        char menuOption = Console.ReadLine()[0];
-                        OptionsMenu.ExploreMenu(menuOption);
-                        break;
-                    default:
-                        ChangeLabel("Not a valid option. Maybe check your case and spelling?");
-                        break;
-                }
-            }
-            while (userChoice != '6');
-            ChangeLabel("Press enter to exit...");
-            // Program ends
-            Console.ReadLine(); */
         }
 
         public static List<object> ShowStuffs(int thisRoom)
@@ -229,7 +104,7 @@ namespace WpfMUI
             return roomInv;
         }
 
-        private void HandleMovement()
+        private string RoomInfo()
         {
             thisRoom = SqliteDataAccess.LoadRoom(currentLocation);
             thisMob = Mob.MobSpawner();
@@ -242,45 +117,60 @@ namespace WpfMUI
             if (thisRoom.EastExit != -1) { exits += " E "; }
             description += $"You are in {thisRoom.Name} ( {thisRoom.ID} ) \n There is a {thisMob.Name} in the room with you!\n" +
                 $"{thisRoom.Description} \n Your exit(s) are : {exits} \n";
-                
-                
-            if (thisRoom.NorthExit != -1)
-            { currentLocation = thisRoom.NorthExit; }
-            else { description += "There is nothing for you here.\n"; }
-
-            if (thisRoom.SouthExit != -1)
-            { currentLocation = thisRoom.SouthExit; }
-            else { description += "Why would you walk into a wall?\n"; }
-
-            if (thisRoom.WestExit != -1)
-            { currentLocation = thisRoom.WestExit; }
-            else { description += "The definition of insanity is doing the same thing over and over... I'm sure you've heard this before\n"; }
-
-            if (thisRoom.EastExit != -1)
-            { currentLocation = thisRoom.EastExit; }
-            else { description += "Sorry, you can't walk through walls.... yet\n"; }
-
-            Message(description);
+            return description;
         }
+        
 
         private void NorthB_Click(object sender, RoutedEventArgs e)
         {
-            HandleMovement();
+            if (thisRoom.NorthExit != -1)
+            {
+                InfoDisplay.Text = RoomInfo();
+                currentLocation = thisRoom.NorthExit;
+            }
+            else 
+            {
+                InfoDisplay.Text += "There is nothing for you here.\n"; 
+            }
         }
 
         private void SouthB_Click(object sender, RoutedEventArgs e)
         {
-            HandleMovement();
+            if (thisRoom.SouthExit != -1)
+            {
+                InfoDisplay.Text = RoomInfo();
+                currentLocation = thisRoom.SouthExit; 
+            }
+            else 
+            {
+                InfoDisplay.Text += "Why would you walk into a wall?\n"; 
+            }
         }
 
         private void EastB_Click(object sender, RoutedEventArgs e)
-        { 
-            HandleMovement(); 
+        {
+            if (thisRoom.SouthExit != -1)
+            {
+                InfoDisplay.Text = RoomInfo();
+                currentLocation = thisRoom.SouthExit;
+            }
+            else
+            {
+                InfoDisplay.Text += "Sorry, you can't walk through walls.... yet\n";
+            }
         }
 
         private void WestB_Click(object sender, RoutedEventArgs e)
         {
-            HandleMovement();
+            if (thisRoom.SouthExit != -1)
+            {
+                InfoDisplay.Text = RoomInfo();
+                currentLocation = thisRoom.SouthExit;
+            }
+            else
+            {
+                InfoDisplay.Text += "The definition of insanity is doing the same thing over and over... I'm sure you've heard this before\n";
+            }
         }
 
         private void AttackB_Click(object sender, RoutedEventArgs e)
