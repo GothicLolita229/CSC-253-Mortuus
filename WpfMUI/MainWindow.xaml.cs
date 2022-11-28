@@ -243,25 +243,25 @@ namespace WpfMUI
             if (thisRoom.SouthExit != -1) { exits += " S "; }
             if (thisRoom.WestExit != -1) { exits += " W "; }
             if (thisRoom.EastExit != -1) { exits += " E "; }
-            description += $"You are in {thisRoom.Name} ( {thisRoom.ID} ) \n There is a " + thisMob.Name + " in the room with you!" + "\n" +
+            description += $"You are in {thisRoom.Name} ( {thisRoom.ID} ) \n There is a {thisMob.Name} in the room with you!\n" +
                 $"{thisRoom.Description} \n Your exit(s) are : {exits} \n";
                 
                 
             if (thisRoom.NorthExit != -1)
             { currentLocation = thisRoom.NorthExit; }
-            else { description += "There is nothing for you here."; }
+            else { description += "There is nothing for you here.\n"; }
 
             if (thisRoom.SouthExit != -1)
             { currentLocation = thisRoom.SouthExit; }
-            else { description += "Why would you walk into a wall?"; }
+            else { description += "Why would you walk into a wall?\n"; }
 
             if (thisRoom.WestExit != -1)
             { currentLocation = thisRoom.WestExit; }
-            else { description += "The definition of insanity is doing the same thing over and over... I'm sure you've heard this before"; }
+            else { description += "The definition of insanity is doing the same thing over and over... I'm sure you've heard this before\n"; }
 
             if (thisRoom.EastExit != -1)
             { currentLocation = thisRoom.EastExit; }
-            else { description += "Sorry, you can't walk through walls.... yet"; }
+            else { description += "Sorry, you can't walk through walls.... yet\n"; }
 
             Message(description);
         }
