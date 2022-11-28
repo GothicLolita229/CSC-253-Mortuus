@@ -1,14 +1,17 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MortuusClassLibrary;
 using System;
 
 namespace MortuusClassLibraryTests2
 {
     [TestClass]
-    public class UnitTest1
+    public class LoadMob
     {
         [TestMethod]
-        public void TestMethod1()
+        public void LoadMobTest()
         {
+            Mob mob = SqliteDataAccess.LoadMob(201);
+            Assert.AreEqual(201, mob.ID);
         }
     }
 }

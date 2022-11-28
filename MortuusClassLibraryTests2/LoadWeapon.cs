@@ -1,14 +1,17 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using MortuusClassLibrary;
 
 namespace MortuusClassLibraryTests2
 {
     [TestClass]
-    public class UnitTest1
+    public class LoadWeapon
     {
         [TestMethod]
-        public void TestMethod1()
+        public void LoadWeaponTest()
         {
+            Weapon weapon = SqliteDataAccess.LoadWeapon(701);
+            Assert.AreEqual(701, weapon.IDNumber);
         }
     }
 }

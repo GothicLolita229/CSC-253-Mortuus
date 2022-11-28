@@ -1,14 +1,17 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MortuusClassLibrary;
 using System;
 
 namespace MortuusClassLibraryTests2
 {
     [TestClass]
-    public class UnitTest1
+    public class LoadTreasure
     {
         [TestMethod]
-        public void TestMethod1()
+        public void LoadTreasureTest()
         {
+            Treasure treasure = SqliteDataAccess.LoadTreasure(601);
+            Assert.AreEqual(601, treasure.IDNumber);
         }
     }
 }

@@ -51,8 +51,18 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LoadTreasure.cs" />
+    <Compile Include="LoadRoom.cs" />
+    <Compile Include="LoadWeapon.cs" />
+    <Compile Include="LoadPotion.cs" />
+    <Compile Include="LoadMob.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MortuusClassLibrary\MortuusClassLibrary.csproj">
+      <Project>{4f5ad540-5efc-4da1-a6cd-255bb012e281}</Project>
+      <Name>MortuusClassLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

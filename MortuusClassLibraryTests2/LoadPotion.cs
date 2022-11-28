@@ -1,14 +1,17 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MortuusClassLibrary;
 using System;
 
 namespace MortuusClassLibraryTests2
 {
     [TestClass]
-    public class UnitTest1
+    public class LoadPotion
     {
         [TestMethod]
-        public void TestMethod1()
+        public void LoadPotionTest()
         {
+            Potion potion = SqliteDataAccess.LoadPotion(401);
+            Assert.AreEqual(401, potion.IDNumber);
         }
     }
 }
