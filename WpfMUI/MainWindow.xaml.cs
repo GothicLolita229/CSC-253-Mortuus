@@ -194,43 +194,40 @@ namespace WpfMUI
             ChangeLabel("Press enter to exit...");
             // Program ends
             Console.ReadLine(); */
-            }
+        }
 
-            public static List<object> ShowStuffs(int thisRoom)
+        public static List<object> ShowStuffs(int thisRoom)
+        {
+            List<object> roomInv = SqliteDataAccess.LoadRoomInv(thisRoom);
+            
+            if (!roomInv[2].Equals(-1))
             {
-                List<object> roomInv = SqliteDataAccess.LoadRoomInv(thisRoom);
-                /*for(int i=0; i <= roomInv.Count; i++)
-                {
-
-                }*/
-                if (!roomInv[2].Equals(-1))
-                {
-                    Item item = SqliteDataAccess.LoadItem(roomInv[2]);
-                    roomInv[2] = item; //QuestItem
-                }
-                if (!roomInv[3].Equals(-1))
-                {
-                    Weapon weapon = SqliteDataAccess.LoadWeapon(roomInv[3]);
-                    roomInv[3] = weapon; //Weapon
-                }
-                if (!roomInv[4].Equals(-1))
-                {
-                    Potion potion = SqliteDataAccess.LoadPotion(roomInv[4]);
-                    roomInv[4] = potion; //Potion
-                }
-                if (!roomInv[5].Equals(-1))
-                {
-                    Treasure treasure = SqliteDataAccess.LoadTreasure(roomInv[5]);
-                    roomInv[5] = treasure; //Treasure
-                }
-                if (!roomInv[6].Equals(-1))
-                {
-                    Mob mob = SqliteDataAccess.LoadMob(roomInv[6]);
-                    roomInv[6] = mob; //Mob
-                }
-
-                return roomInv;
+                Item item = SqliteDataAccess.LoadItem(roomInv[2]);
+                roomInv[2] = item; //QuestItem
             }
+            if (!roomInv[3].Equals(-1))
+            {
+                Weapon weapon = SqliteDataAccess.LoadWeapon(roomInv[3]);
+                roomInv[3] = weapon; //Weapon
+            }
+            if (!roomInv[4].Equals(-1))
+            {
+                Potion potion = SqliteDataAccess.LoadPotion(roomInv[4]);
+                roomInv[4] = potion; //Potion
+            }
+            if (!roomInv[5].Equals(-1))
+            {
+                Treasure treasure = SqliteDataAccess.LoadTreasure(roomInv[5]);
+                roomInv[5] = treasure; //Treasure
+            }
+            if (!roomInv[6].Equals(-1))
+            {
+                Mob mob = SqliteDataAccess.LoadMob(roomInv[6]);
+                roomInv[6] = mob; //Mob
+            }
+
+            return roomInv;
+        }
 
         private void HandleMovement()
         {
