@@ -37,14 +37,13 @@ namespace ConsoleUI
 
             Action<string> WL = words => Console.WriteLine(words);
 
-            string charName = "Mujika";
+            string charName = player.Name;
             int damage;
             int mobHp;
             bool hasEscaped = false;
             int hp = player.HP;
             char userChoice;
             int currentLocation = 301;
-            Console.WriteLine(SqliteDataAccess.LoadWeapon(701).Name);
             WL("MAIN MENU: \n");
             OptionsMenu.HelpMenu();
             WL($"{charName}, enter numeric value from menu to select an option: ");
