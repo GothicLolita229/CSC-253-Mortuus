@@ -66,7 +66,7 @@ namespace MortuusClassLibrary
                 return output;
             }
         }
-        public static Room LoadRoom(int ID)
+        /*public static Room LoadRoom(int ID)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
@@ -76,9 +76,28 @@ namespace MortuusClassLibrary
 
                 return output;
             }
+        }*/
+
+        public static List<Room> LoadRoom()
+        {
+            using (var con = new SQLiteConnection(LoadConnectionString()))
+            {
+                con.Open();
+                var cmd = new SQLiteCommand("SELECT * FROM Rooms", con);
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+
+                List<Room> rooms = new List<Room>();
+
+                while (rdr.Read())
+                {
+                    Room room = new Room(rdr.GetInt32(0), rdr.GetString(1), rdr.GetString(2), rdr.GetInt32(3), rdr.GetInt32(4), rdr.GetInt32(5), rdr.GetInt32(6));
+                    rooms.Add(room);
+                }
+                return rooms;
+            }
         }
 
-        public static List<Room> LoadRoomsList()
+        public static List<Room> LoadRoomsDisplay()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {

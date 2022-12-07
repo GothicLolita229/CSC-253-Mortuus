@@ -65,7 +65,7 @@ namespace WpfMUI
             // MAKE THIS WORK CIARA
             player = LoadPlayer.PlayerInfo(this);
 
-            thisRoom = SqliteDataAccess.LoadRoom(currentLocation);
+            thisRoom = Room.rooms.FindIndex(locus => locus.ID == currentLocation);//SqliteDataAccess.LoadRoom(currentLocation);
             charName = player.Name;
             hp = player.HP;
             
@@ -106,7 +106,7 @@ namespace WpfMUI
 
         private string RoomInfo()
         {
-            thisRoom = SqliteDataAccess.LoadRoom(currentLocation);
+            thisRoom = Room.rooms.FindIndex(locus => locus.ID == currentLocation);//SqliteDataAccess.LoadRoom(currentLocation); // FIXME Update to new SQLite method 
             thisMob = Mob.MobSpawner();
             mobHp = thisMob.HP;
             string exits = "";
@@ -125,6 +125,7 @@ namespace WpfMUI
         {
             if (thisRoom.NorthExit != -1)
             {
+                InfoDisplay.Text = "";
                 InfoDisplay.Text = RoomInfo();
                 currentLocation = thisRoom.NorthExit;
             }
@@ -138,6 +139,7 @@ namespace WpfMUI
         {
             if (thisRoom.SouthExit != -1)
             {
+                InfoDisplay.Text = "";
                 InfoDisplay.Text = RoomInfo();
                 currentLocation = thisRoom.SouthExit; 
             }
@@ -151,6 +153,7 @@ namespace WpfMUI
         {
             if (thisRoom.SouthExit != -1)
             {
+                InfoDisplay.Text = "";
                 InfoDisplay.Text = RoomInfo();
                 currentLocation = thisRoom.SouthExit;
             }
@@ -164,6 +167,7 @@ namespace WpfMUI
         {
             if (thisRoom.SouthExit != -1)
             {
+                InfoDisplay.Text = "";
                 InfoDisplay.Text = RoomInfo();
                 currentLocation = thisRoom.SouthExit;
             }
