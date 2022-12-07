@@ -78,7 +78,7 @@ namespace MortuusClassLibrary
             }
         }*/
 
-        public static List<Room> LoadRoom()
+        public static List<Room> LoadRoom() // Version 2 pulls all from database and makes a list of objects
         {
             using (var con = new SQLiteConnection(LoadConnectionString()))
             {
